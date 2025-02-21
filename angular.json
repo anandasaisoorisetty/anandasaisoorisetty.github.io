@@ -13,7 +13,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "docs",
-            "baseHref": "/anandasaisoorisetty.github.io/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -96,4 +95,3 @@
     "analytics": "d5858df3-bfef-4b27-b7ad-2f11238428c5"
   }
 }
-
