@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "docs",
             "baseHref": "/anandasaisoorisetty.github.io/",
+            "deployUrl": "/anandasaisoorisetty.github.io/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
