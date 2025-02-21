@@ -1,0 +1,73 @@
+/* Ad Section Styling */
+.ads-container {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Ad Card */
+.ad-card {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.ad-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.ad-card p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.ad-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.ad-btn:hover {
+  background: #0056b3;
+}
+
+/* Hide on smaller screens */
+@media (max-width: 768px) {
+  .ads-container {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
