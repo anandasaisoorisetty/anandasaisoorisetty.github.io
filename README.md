@@ -76,7 +76,10 @@ Feel free to fork this repo, submit issues, or send pull requests with improveme
 
 📧 Contact
 Reach out via:
-Email: asoorisetty@gmail.com (mailto:asoorisetty@gmail.com)
-Social: LinkedIn | GitHub | Behance
+💼 [LinkedIn](https://www.linkedin.com/in/anandasai/)  
+📷 [Behance](https://www.behance.net/anandasaisoorisetty)  
+💻 [GitHub](https://github.com/anandasaisoorisetty)  
+📧 [Email](mailto:asoorisetty@gmail.com)  
+📩 [WhatsApp](https://wa.me/919030444739) 
 
 Built with 💻 by Ananda Sai Soorisetty © 2025
