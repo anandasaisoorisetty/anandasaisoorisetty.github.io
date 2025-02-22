@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+/* Ensure no global overrides interfere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+.footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+/* Wrap Footer Links into Two Lines for Small Screens */
+@media (max-width: 768px) {
+  .footer .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer .footer-links a {
+    width: 45%; /* Forces two columns */
+    text-align: center;
+  }
+}
+
+/* Ensure footer stays at bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-root {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
