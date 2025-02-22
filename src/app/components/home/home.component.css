@@ -438,14 +438,41 @@ body {
   margin-bottom: 20px;
 }
 
-.contact-info a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 600;
+.contact-info p {
+  margin-bottom: 10px;
 }
 
-.contact-info a:hover {
-  text-decoration: underline;
+/* Contact Buttons */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  gap: 5px;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+}
+
+.email-btn {
+  background: #d44638;
+}
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+/* Contact Icon */
+.contact-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Social Media Links */
@@ -457,33 +484,64 @@ body {
 }
 
 .social-icon {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   text-decoration: none;
-  transition: 0.3s;
+  transition: opacity 0.3s;
+}
+
+.social-icon-img {
+  width: 24px;
+  height: 24px;
 }
 
 .linkedin {
   background: #0077b5;
-  color: white;
 }
 
 .github {
   background: #333;
-  color: white;
 }
 
 .behance {
   background: #1769ff;
-  color: white;
 }
 
 .social-icon:hover {
   opacity: 0.8;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 50px 5%;
+  }
 
+  .contact-info {
+    font-size: 16px;
+  }
 
+  .contact-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-icon-img {
+    width: 20px;
+    height: 20px;
+  }
+}
