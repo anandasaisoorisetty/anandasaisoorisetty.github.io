@@ -4,14 +4,28 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-ads',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule], // ✅ Import CommonModule to use *ngIf
   templateUrl: './ads.component.html',
   styleUrls: ['./ads.component.css']
 })
 export class AdsComponent {
-  isVisible = true; // Always visible on refresh
+  showPopup = false;
 
-  closeAds() {
-    this.isVisible = false; // Hide ads until next refresh
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    if (window.innerWidth <= 768) {  // ✅ Mobile screens (adjust width if needed)
+      const isClosed = localStorage.getItem('popupClosed');
+      if (!isClosed) {
+        this.showPopup = true;
+      }
+    }
+  }
+
+  closePopup() {
+    this.showPopup = false;
+    localStorage.setItem('popupClosed', 'true'); // ✅ Remember user action
   }
 }

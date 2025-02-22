@@ -1,15 +1,8 @@
-<div class="ads-container" *ngIf="isVisible">
-  <button class="close-btn" (click)="closeAds()">✖</button>
-
-  <div class="ad-card">
-    <h3>Need a Loan?</h3>
-    <p>Get Home, Business, or Personal Loans with the best rates.</p>
-    <a href="https://wa.me/9030444739" target="_blank" class="ad-btn">Contact Now</a>
-  </div>
-
-  <div class="ad-card">
-    <h3>Looking for Insurance?</h3>
-    <p>Secure your future with Life & Health Insurance.</p>
-    <a href="https://wa.me/9030444739" target="_blank" class="ad-btn">Get a Quote</a>
+<!-- Popup Ad (Only for Mobile Screens) -->
+<div class="popup-overlay" *ngIf="showPopup">
+  <div class="popup-content">
+    <p>📢 Need a Loan or Insurance? Contact me now!</p>
+    <a href="https://wa.me/9030444739" target="_blank" class="popup-btn">📩 WhatsApp Me</a>
+    <button (click)="closePopup()" class="popup-close">✖</button>
   </div>
 </div>
