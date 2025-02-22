@@ -57,8 +57,10 @@ mv dist/* .
 git add .
 git commit -m "Deployed latest changes"
 git push origin main
+```
 
 📂 Project Structure
+```bash
 anandasaisoorisetty.github.io/
 ├── src/
 │   ├── app/
@@ -70,6 +72,7 @@ anandasaisoorisetty.github.io/
 ├── angular.json                 # Angular configuration
 ├── package.json                 # Dependencies
 └── README.md                    # This file
+```
 
 🤝 Contributing
 Feel free to fork this repo, submit issues, or send pull requests with improvements!
