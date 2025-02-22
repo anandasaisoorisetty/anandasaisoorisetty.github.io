@@ -12,7 +12,6 @@ export class AdsComponent implements OnInit {
   showPopup = false;
 
   ngOnInit() {
-    // Always show popup on all screens
     this.showPopup = true;
     console.log('AdsComponent ngOnInit triggered, showPopup:', this.showPopup);
   }

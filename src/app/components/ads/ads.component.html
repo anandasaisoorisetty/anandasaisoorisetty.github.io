@@ -2,7 +2,9 @@
 <div class="popup-overlay" *ngIf="showPopup">
   <div class="popup-content">
     <img src="assets/finance.jpg" alt="Finance Ad" class="popup-image">
-    <a href="https://wa.me/9030444739" target="_blank" class="popup-btn">📩 WhatsApp Me</a>
+    <div class="popup-text">
+      <a href="https://wa.me/9030444739" target="_blank" class="popup-btn">📩 WhatsApp Me</a>
+    </div>
     <button (click)="closePopup()" class="popup-close">✖</button>
   </div>
 </div>

@@ -5,33 +5,46 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7); /* Slightly darker for emphasis */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
 }
 
-/* Popup Content */
+/* Popup Content (Portrait Layout) */
 .popup-content {
   background: #fff;
-  padding: 20px;
-  width: 80%;
-  max-width: 400px; /* Increased max-width to accommodate image and content */
+  padding: 15px;
+  width: 300px; /* Reduced fixed width for narrow portrait look */
+  max-height: 90vh; /* Limit height to 90% of viewport */
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Space between elements */
+  overflow-y: auto; /* Scroll if content exceeds height */
 }
 
 /* Popup Image */
 .popup-image {
-  width: 68.63px; /* Exact width of finance.jpg */
-  height: 100px; /* Exact height of finance.jpg */
+  width: 100%; /* Full width of popup-content */
+  height: 80vh; /* Covers 80% of screen height */
+  object-fit: cover; /* Ensures image scales proportionally */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+/* Popup Text Container */
+.popup-text {
+  padding: 10px 0;
+}
+
+/* Text Styling */
+.popup-text p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 /* WhatsApp Button */
@@ -43,23 +56,33 @@
   padding: 10px 15px;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 /* Close Button */
 .popup-close {
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 10px;
   border: none;
   background: transparent;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
+  color: #333;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 400px) {
   .popup-content {
-    width: 90%;
-    max-width: 300px; /* Slightly smaller on very small screens */
+    width: 260px; /* Even narrower on small screens */
+  }
+
+  .popup-text p {
+    font-size: 14px; /* Slightly smaller text */
+  }
+
+  .popup-btn {
+    padding: 8px 12px; /* Smaller button */
+    font-size: 12px;
   }
 }
