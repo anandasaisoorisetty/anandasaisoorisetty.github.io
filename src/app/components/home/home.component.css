@@ -17,7 +17,7 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Ensure a fixed height */
+  height: 60px;
   background: white;
   z-index: 1000;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
@@ -30,8 +30,8 @@ body, html {
   justify-content: center;
   padding: 0 10%;
   gap: 50px;
-  height: calc(100vh - 60px); /* Removes extra space */
-  margin-top: 0; /* Ensure it touches navbar */
+  height: calc(100vh - 60px);
+  margin-top: 0;
 }
 
 /* Text Content Styling */
@@ -124,7 +124,6 @@ body, html {
   }
 }
 
-
 /* About Section */
 .about {
   text-align: center;
@@ -157,11 +156,11 @@ body, html {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  border: 2px solid #ddd; /* Outlined card */
+  border: 2px solid #ddd;
   width: 250px;
   text-align: center;
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  min-height: 160px; /* Ensures all cards are of equal height */
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -172,17 +171,15 @@ body, html {
   border-color: #007bff;
 }
 
-/* Headings */
 .skill-card h3 {
   font-size: 18px;
-  margin-bottom: 10px; /* Ensures equal spacing */
+  margin-bottom: 10px;
 }
 
-/* Description */
 .skill-card p {
   font-size: 14px;
   color: #666;
-  margin-top: auto; /* Pushes text towards the bottom to ensure equal spacing */
+  margin-top: auto;
 }
 
 /* Responsive Design */
@@ -198,15 +195,13 @@ body, html {
 
   .skill-card {
     width: 90%;
-    min-height: auto; /* Adjust for smaller screens */
+    min-height: auto;
   }
 }
 
-
-
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif; /* Ensures consistency */
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -239,13 +234,6 @@ body {
   font-weight: 400;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 10%;
-  }
-}
-
 /* Services Section */
 .services {
   text-align: center;
@@ -274,7 +262,7 @@ body {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: nowrap;
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* Individual Service Card */
@@ -284,9 +272,9 @@ body {
   border-radius: 10px;
   border: 2px solid #ddd;
   text-align: center;
-  transition: border-color 0.3s ease-in-out; /* Removed scaling effect */
+  transition: border-color 0.3s ease-in-out;
   min-height: 200px;
-  width: 23%; /* Ensures all 4 cards fit in one row */
+  width: 23%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -295,7 +283,6 @@ body {
 .service-card:hover {
   border-color: #007bff;
 }
-
 
 .service-card h3 {
   font-size: 20px;
@@ -340,7 +327,6 @@ body {
   }
 }
 
-
 /* Experience Section */
 .experience {
   text-align: center;
@@ -384,7 +370,6 @@ body {
   border-color: #007bff;
 }
 
-/* Headings */
 .experience-card h3 {
   font-size: 22px;
   font-weight: 600;
@@ -392,7 +377,6 @@ body {
   color: #222;
 }
 
-/* Paragraph */
 .experience-card p {
   font-size: 16px;
   color: #666;
@@ -434,12 +418,15 @@ body {
 
 /* Contact Info */
 .contact-info {
-  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.contact-info p {
-  margin-bottom: 10px;
+/* Contact Buttons Container */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  flex-wrap: wrap; /* Wrap on very small screens */
 }
 
 /* Contact Buttons */
@@ -448,7 +435,7 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 8px 12px; /* Reduced padding for normal width */
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
@@ -458,11 +445,11 @@ body {
 }
 
 .whatsapp-btn {
-  background: #25d366;
+  background: #25d366; /* WhatsApp green */
 }
 
 .email-btn {
-  background: #d44638;
+  background: #d44638; /* Gmail red */
 }
 
 .contact-btn:hover {
@@ -473,45 +460,52 @@ body {
 .contact-icon {
   width: 20px;
   height: 20px;
+  filter: brightness(0) invert(1); /* Ensures icons are white for visibility */
 }
 
 /* Social Media Links */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   margin-top: 20px;
+  flex-wrap: wrap; /* Wrap on small screens */
 }
 
-.social-icon {
+.social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
   text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px; /* Rectangular shape */
+  font-weight: bold;
+  font-size: 16px;
+  gap: 8px; /* Space between icon and text */
+  color: white;
   transition: opacity 0.3s;
+  min-width: 140px; /* Ensure buttons are wide enough for text */
 }
 
 .social-icon-img {
-  width: 24px;
-  height: 24px;
+  width: 30px; /* Larger icons */
+  height: 30px;
+  filter: brightness(0) invert(1); /* White icons for visibility */
 }
 
 .linkedin {
-  background: #0077b5;
+  background: #0077b5; /* LinkedIn blue */
 }
 
 .github {
-  background: #333;
+  background: #181717; /* GitHub dark gray (updated for visibility) */
 }
 
 .behance {
-  background: #1769ff;
+  background: #1769ff; /* Behance blue */
 }
 
-.social-icon:hover {
+.social-btn:hover {
   opacity: 0.8;
 }
 
@@ -521,12 +515,12 @@ body {
     padding: 50px 5%;
   }
 
-  .contact-info {
-    font-size: 16px;
+  .contact-buttons {
+    gap: 10px;
   }
 
   .contact-btn {
-    padding: 8px 12px;
+    padding: 6px 10px;
     font-size: 14px;
   }
 
@@ -535,13 +529,14 @@ body {
     height: 18px;
   }
 
-  .social-icon {
-    width: 36px;
-    height: 36px;
+  .social-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    min-width: 120px;
   }
 
   .social-icon-img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 }
