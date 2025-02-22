@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './ads.component.html',
   styleUrls: ['./ads.component.css']
 })
-export class AdsComponent {
+export class AdsComponent implements OnInit {
   showPopup = false;
 
   ngOnInit() {
@@ -17,15 +17,11 @@ export class AdsComponent {
 
   checkScreenSize() {
     if (window.innerWidth <= 768) {  // ✅ Mobile screens (adjust width if needed)
-      const isClosed = localStorage.getItem('popupClosed');
-      if (!isClosed) {
-        this.showPopup = true;
-      }
+      this.showPopup = true; // ✅ Always show the popup on refresh
     }
   }
 
   closePopup() {
-    this.showPopup = false;
-    localStorage.setItem('popupClosed', 'true'); // ✅ Remember user action
+    this.showPopup = false; // ✅ Close the popup but it will appear again on refresh
   }
 }

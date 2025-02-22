@@ -489,19 +489,24 @@ body {
   font-size: 16px;
 }
 
+/* Footer Links - Adjust for Mobile */
 .footer-links {
-  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap; /* 🔹 Allows links to break into multiple lines */
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-links a {
-  color: #f4f4f4;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
+  margin: 5px 10px; /* 🔹 Add space between links */
+  display: inline-block;
 }
 
-.footer-links a:hover {
-  color: #007bff;
+/* Wrap Links into 2 Lines for Small Screens */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column; /* 🔹 Stack links in 2 lines */
+    text-align: center;
+  }
 }
 
