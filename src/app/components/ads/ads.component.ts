@@ -12,16 +12,13 @@ export class AdsComponent implements OnInit {
   showPopup = false;
 
   ngOnInit() {
-    this.checkScreenSize();
-  }
-
-  checkScreenSize() {
-    if (window.innerWidth <= 768) { // Mobile screens
-      this.showPopup = true;
-    }
+    this.showPopup = false;  // Ensure it resets every time
+    setTimeout(() => {
+      this.showPopup = true; // ✅ Always show on refresh after 1 second
+    }, 1000);
   }
 
   closePopup() {
-    this.showPopup = false;
+    this.showPopup = false;  // ✅ Closes but will reappear on refresh
   }
 }
