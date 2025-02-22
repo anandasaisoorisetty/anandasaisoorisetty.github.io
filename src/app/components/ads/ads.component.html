@@ -1,8 +1,9 @@
-<!-- Popup Ad (Only for Mobile Screens) -->
-<div class="popup-overlay" *ngIf="showPopup">
-  <div class="popup-content">
-    <p>📢 Need a Loan or Insurance? Contact me now!</p>
-    <a href="https://wa.me/9030444739" target="_blank" class="popup-btn">📩 WhatsApp Me</a>
-    <button (click)="closePopup()" class="popup-close">✖</button>
+<div class="ads-container" *ngIf="showPopup">
+  <div class="popup-overlay">
+    <div class="popup-content">
+      <p>📢 Need a Loan or Insurance? Contact me now!</p>
+      <a href="https://wa.me/9030444739" target="_blank" class="popup-btn">📩 WhatsApp Me</a>
+      <button (click)="closePopup()" class="popup-close">✖</button>
+    </div>
   </div>
 </div>

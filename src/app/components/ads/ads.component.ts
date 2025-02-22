@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-ads',
   standalone: true,
-  imports: [CommonModule], // ✅ Import CommonModule to use *ngIf
+  imports: [CommonModule],
   templateUrl: './ads.component.html',
   styleUrls: ['./ads.component.css']
 })
@@ -16,12 +16,12 @@ export class AdsComponent implements OnInit {
   }
 
   checkScreenSize() {
-    if (window.innerWidth <= 768) {  // ✅ Mobile screens (adjust width if needed)
-      this.showPopup = true; // ✅ Always show the popup on refresh
+    if (window.innerWidth <= 768) { // Mobile screens
+      this.showPopup = true;
     }
   }
 
   closePopup() {
-    this.showPopup = false; // ✅ Close the popup but it will appear again on refresh
+    this.showPopup = false;
   }
 }

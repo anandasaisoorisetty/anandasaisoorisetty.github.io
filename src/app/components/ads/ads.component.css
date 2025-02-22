@@ -12,12 +12,12 @@
   z-index: 9999;
 }
 
-/* Popup Box */
+/* Popup Content */
 .popup-content {
   background: #fff;
   padding: 15px;
-  width: 90%; /* 🔹 Reduce width to fit smaller screens */
-  max-width: 300px; /* 🔹 Adjust max-width for a smaller popup */
+  width: 90%; /* Reduced width */
+  max-width: 300px;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -46,12 +46,10 @@
   cursor: pointer;
 }
 
-
-
 /* Adjust Popup for Very Small Screens */
 @media (max-width: 400px) {
   .popup-content {
-    width: 95%; /* 🔹 Make it even smaller on very small screens */
+    width: 95%;
     max-width: 280px;
   }
 }
