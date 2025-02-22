@@ -425,8 +425,8 @@ body {
 .contact-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Space between buttons */
-  flex-wrap: wrap; /* Wrap on very small screens */
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 /* Contact Buttons */
@@ -435,11 +435,11 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 8px 12px; /* Reduced padding for normal width */
+  padding: 10px 20px; /* Increased width with more padding */
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
-  gap: 5px;
+  gap: 8px; /* Increased gap for better alignment */
   color: white;
   transition: opacity 0.3s;
 }
@@ -458,18 +458,18 @@ body {
 
 /* Contact Icon */
 .contact-icon {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1); /* Ensures icons are white for visibility */
+  width: 24px; /* Slightly larger for alignment */
+  height: 24px;
+  filter: brightness(0) invert(1); /* White icons */
 }
 
 /* Social Media Links */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px; /* Smaller gap for compact layout */
   margin-top: 20px;
-  flex-wrap: wrap; /* Wrap on small screens */
+  flex-wrap: wrap;
 }
 
 .social-btn {
@@ -477,32 +477,32 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px; /* Rectangular shape */
+  padding: 8px 12px; /* Smaller than contact-btn */
+  border-radius: 5px;
   font-weight: bold;
-  font-size: 16px;
-  gap: 8px; /* Space between icon and text */
+  font-size: 14px; /* Smaller text */
+  gap: 6px;
   color: white;
   transition: opacity 0.3s;
-  min-width: 140px; /* Ensure buttons are wide enough for text */
+  min-width: 120px; /* Smaller than contact-btn */
 }
 
 .social-icon-img {
-  width: 30px; /* Larger icons */
-  height: 30px;
-  filter: brightness(0) invert(1); /* White icons for visibility */
+  width: 20px; /* Smaller than contact-icon */
+  height: 20px;
+  filter: brightness(0) invert(1); /* White icons */
 }
 
 .linkedin {
-  background: #0077b5; /* LinkedIn blue */
+  background: #0077b5;
 }
 
 .github {
-  background: #181717; /* GitHub dark gray (updated for visibility) */
+  background: #181717;
 }
 
 .behance {
-  background: #1769ff; /* Behance blue */
+  background: #1769ff;
 }
 
 .social-btn:hover {
@@ -520,23 +520,23 @@ body {
   }
 
   .contact-btn {
-    padding: 6px 10px;
+    padding: 8px 16px;
     font-size: 14px;
   }
 
   .contact-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   .social-btn {
-    padding: 8px 12px;
-    font-size: 14px;
-    min-width: 120px;
+    padding: 6px 10px;
+    font-size: 12px;
+    min-width: 100px;
   }
 
   .social-icon-img {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
   }
 }
