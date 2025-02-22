@@ -435,21 +435,22 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 10px 20px; /* Increased width with more padding */
+  padding: 10px 20px; /* Same padding for both buttons */
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
-  gap: 8px; /* Increased gap for better alignment */
+  gap: 8px;
   color: white;
   transition: opacity 0.3s;
+  min-width: 160px; /* Consistent width for both buttons */
 }
 
 .whatsapp-btn {
-  background: #25d366; /* WhatsApp green */
+  background: #25d366;
 }
 
 .email-btn {
-  background: #d44638; /* Gmail red */
+  background: #d44638;
 }
 
 .contact-btn:hover {
@@ -458,16 +459,22 @@ body {
 
 /* Contact Icon */
 .contact-icon {
-  width: 24px; /* Slightly larger for alignment */
+  width: 24px;
   height: 24px;
+  object-fit: contain; /* Preserve icon shape */
   filter: brightness(0) invert(1); /* White icons */
+}
+
+.mail-icon {
+  width: 30px; /* Larger Mail icon */
+  height: 30px;
 }
 
 /* Social Media Links */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Smaller gap for compact layout */
+  gap: 10px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
@@ -477,10 +484,10 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 8px 12px; /* Smaller than contact-btn */
+  padding: 8px 12px;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 14px; /* Smaller text */
+  font-size: 14px;
   gap: 6px;
   color: white;
   transition: opacity 0.3s;
@@ -488,8 +495,9 @@ body {
 }
 
 .social-icon-img {
-  width: 20px; /* Smaller than contact-icon */
+  width: 20px; /* Actual size may vary; adjust if needed */
   height: 20px;
+  object-fit: contain; /* Preserve icon shape */
   filter: brightness(0) invert(1); /* White icons */
 }
 
@@ -522,11 +530,17 @@ body {
   .contact-btn {
     padding: 8px 16px;
     font-size: 14px;
+    min-width: 140px;
   }
 
   .contact-icon {
     width: 20px;
     height: 20px;
+  }
+
+  .mail-icon {
+    width: 26px;
+    height: 26px;
   }
 
   .social-btn {
