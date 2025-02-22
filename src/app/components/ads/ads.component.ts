@@ -20,4 +20,11 @@ export class AdsComponent implements OnInit {
     this.showPopup = false;
     console.log('Popup closed');
   }
+
+  // New method to handle overlay click
+  closePopupOnOverlay(event: MouseEvent) {
+    if (event.target === event.currentTarget) { // Only close if clicking the overlay, not content
+      this.closePopup();
+    }
+  }
 }
