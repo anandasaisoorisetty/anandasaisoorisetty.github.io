@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Slightly darker for emphasis */
+  background: rgba(0, 0, 0, 0.5); /* Lighter overlay for less distraction */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +16,8 @@
 .popup-content {
   background: #fff;
   padding: 15px;
-  width: 300px; /* Reduced fixed width for narrow portrait look */
-  max-height: 90vh; /* Limit height to 90% of viewport */
+  width: 280px; /* Narrower fixed width */
+  max-height: 80vh; /* 80% of screen height */
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -29,10 +29,10 @@
 
 /* Popup Image */
 .popup-image {
-  width: 100%; /* Full width of popup-content */
-  height: 80vh; /* Covers 80% of screen height */
-  object-fit: cover; /* Ensures image scales proportionally */
-  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  width: 100%; /* Fits container width (280px) */
+  max-height: 60vh; /* Limits image height to avoid blurring, ~60% of popup */
+  object-fit: contain; /* Prevents stretching/blurring, keeps natural aspect ratio */
+  border-radius: 8px 8px 0 0;
 }
 
 /* Popup Text Container */
@@ -62,27 +62,33 @@
 /* Close Button */
 .popup-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   border: none;
   background: transparent;
-  font-size: 20px;
+  font-size: 14px; /* Smaller size for less visibility */
+  color: #666; /* Subtle gray color */
   cursor: pointer;
-  color: #333;
+  opacity: 0.7; /* Slightly faded */
+  transition: opacity 0.3s;
+}
+
+.popup-close:hover {
+  opacity: 1; /* Becomes fully visible on hover */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 400px) {
   .popup-content {
-    width: 260px; /* Even narrower on small screens */
+    width: 240px; /* Slightly narrower on small screens */
   }
 
   .popup-text p {
-    font-size: 14px; /* Slightly smaller text */
+    font-size: 14px;
   }
 
   .popup-btn {
-    padding: 8px 12px; /* Smaller button */
+    padding: 8px 12px;
     font-size: 12px;
   }
 }
