@@ -1,10 +1,10 @@
 <!-- Popup Ad -->
 <div class="popup-overlay" *ngIf="showPopup">
   <div class="popup-content">
+    <button (click)="closePopup()" class="popup-close">✖</button>
     <img src="assets/finance.jpg" alt="Finance Ad" class="popup-image">
     <div class="popup-text">
-      <a href="https://wa.me/9030444739" target="_blank" class="popup-btn">📩 WhatsApp Me</a>
+      <a href="https://wa.me/9030444739" target="_blank" class="popup-btn"><i class="bi bi-whatsapp"></i> WhatsApp Me</a>
     </div>
-    <button (click)="closePopup()" class="popup-close">✖</button>
   </div>
 </div>

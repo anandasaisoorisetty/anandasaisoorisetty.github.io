@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Lighter overlay for less distraction */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,22 +16,23 @@
 .popup-content {
   background: #fff;
   padding: 15px;
-  width: 280px; /* Narrower fixed width */
-  max-height: 80vh; /* 80% of screen height */
+  width: 280px;
+  max-height: 80vh;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto; /* Scroll if content exceeds height */
+  overflow-y: auto;
+  position: relative; /* Ensures close button positions relative to this */
 }
 
 /* Popup Image */
 .popup-image {
-  width: 100%; /* Fits container width (280px) */
-  max-height: 60vh; /* Limits image height to avoid blurring, ~60% of popup */
-  object-fit: contain; /* Prevents stretching/blurring, keeps natural aspect ratio */
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
   border-radius: 8px 8px 0 0;
 }
 
@@ -62,25 +63,25 @@
 /* Close Button */
 .popup-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 5px; /* Adjusted to fit inside popup */
+  right: 5px; /* Adjusted to fit inside popup */
   border: none;
   background: transparent;
-  font-size: 14px; /* Smaller size for less visibility */
-  color: #666; /* Subtle gray color */
+  font-size: 14px;
+  color: #666;
   cursor: pointer;
-  opacity: 0.7; /* Slightly faded */
+  opacity: 0.7;
   transition: opacity 0.3s;
 }
 
 .popup-close:hover {
-  opacity: 1; /* Becomes fully visible on hover */
+  opacity: 1;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 400px) {
   .popup-content {
-    width: 240px; /* Slightly narrower on small screens */
+    width: 240px;
   }
 
   .popup-text p {
