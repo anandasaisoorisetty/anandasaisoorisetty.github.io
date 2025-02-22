@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
-  position: relative; /* Ensures close button positions relative to this */
+  position: relative;
 }
 
 /* Popup Image */
@@ -50,7 +50,9 @@
 
 /* WhatsApp Button */
 .popup-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #25d366;
   color: white;
   text-decoration: none;
@@ -58,16 +60,23 @@
   border-radius: 5px;
   font-weight: bold;
   font-size: 14px;
+  gap: 5px; /* Space between icon and text */
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
 }
 
 /* Close Button */
 .popup-close {
   position: absolute;
-  top: 5px; /* Adjusted to fit inside popup */
-  right: 5px; /* Adjusted to fit inside popup */
+  top: 5px;
+  right: 5px;
   border: none;
   background: transparent;
-  font-size: 14px;
+  font-size: 20px; /* Increased from 14px to 20px for better visibility */
   color: #666;
   cursor: pointer;
   opacity: 0.7;
@@ -91,5 +100,10 @@
   .popup-btn {
     padding: 8px 12px;
     font-size: 12px;
+  }
+
+  .whatsapp-icon {
+    width: 18px; /* Slightly smaller on small screens */
+    height: 18px;
   }
 }
