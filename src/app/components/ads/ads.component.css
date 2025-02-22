@@ -15,13 +15,23 @@
 /* Popup Content */
 .popup-content {
   background: #fff;
-  padding: 15px;
-  width: 80%; /* Reduced width for better mobile fit */
-  max-width: 300px;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px; /* Increased max-width to accommodate image and content */
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+}
+
+/* Popup Image */
+.popup-image {
+  width: 68.63px; /* Exact width of finance.jpg */
+  height: 100px; /* Exact height of finance.jpg */
 }
 
 /* WhatsApp Button */
@@ -46,10 +56,10 @@
   cursor: pointer;
 }
 
-/* Adjust Popup for Very Small Screens */
+/* Responsive Adjustments */
 @media (max-width: 400px) {
   .popup-content {
     width: 90%;
-    max-width: 280px;
+    max-width: 300px; /* Slightly smaller on very small screens */
   }
 }
