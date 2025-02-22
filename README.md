@@ -78,7 +78,7 @@ anandasaisoorisetty.github.io/
 Feel free to fork this repo, submit issues, or send pull requests with improvements!
 
 📧 Contact
-Reach out via:
+Reach out via: 
 💼 [LinkedIn](https://www.linkedin.com/in/anandasai/)  
 📷 [Behance](https://www.behance.net/anandasaisoorisetty)  
 💻 [GitHub](https://github.com/anandasaisoorisetty)  
