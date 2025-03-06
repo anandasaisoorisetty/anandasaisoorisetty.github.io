@@ -1,17 +1,20 @@
 /* Navbar Styles */
 .navbar {
-  display: flex;
-  justify-content: center; /* Centers the nav items */
-  align-items: center;
-  padding: 12px 5%;
-  background: rgba(0, 0, 0, 0.8); /* Charcoal Background */
-  backdrop-filter: blur(10px); /* Glassy Effect */
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 10px; /* Adds slight spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(30, 30, 30, 0.8); /* Dark glassy effect */
+  backdrop-filter: blur(10px); /* Adds glass blur effect */
+  border-radius: 50px; /* Cylindrical rectangle */
+  width: auto; /* Auto-fit width based on content */
+  min-width: 60%;
+  max-width: 90%;
   z-index: 1000;
-  border-radius: 0px 0px 20px 20px; /* Smooth bottom corners */
 }
 
 /* Navbar Links */
@@ -26,13 +29,13 @@
   display: inline-block;
 }
 
-/* Nav Items with Cylindrical Hover Effect */
+/* Nav Items - Smooth Hover Effect */
 .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 18px;
   padding: 10px 20px;
-  border-radius: 30px; /* Cylindrical Effect */
+  border-radius: 30px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
@@ -41,47 +44,29 @@
   transform: scale(1.1);
 }
 
-/* Mobile Menu Button */
-.menu-toggle {
-  display: none;
-  background: none;
-  color: white;
-  font-size: 26px;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .navbar {
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    max-width: 95%;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    width: 180px;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
   }
 
   .nav-links li {
-    margin-bottom: 10px;
+    width: 45%; /* Show links in two rows */
   }
 
   .nav-links a {
     display: block;
+    text-align: center;
     padding: 10px;
     width: 100%;
   }
