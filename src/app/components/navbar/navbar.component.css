@@ -20,7 +20,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Default spacing */
   padding: 0;
   flex-wrap: nowrap; /* Prevent wrapping */
 }
@@ -44,26 +44,27 @@
   transform: scale(1.1);
 }
 
-/* 📱 Responsive Design - Single Line & Full Width in Mobile */
+/* 📱 Responsive Design - Reduce Spacing in Mobile */
 @media (max-width: 768px) {
   .navbar {
     width: 100%; /* Full width */
     border-radius: 0; /* Remove rounded edges */
     text-align: center;
     margin-top: 0; /* Remove margin in mobile */
-    padding: 10px; /* Maintain padding */
+    padding: 8px; /* Reduce padding */
   }
 
   .nav-links {
     display: flex;
     flex-wrap: nowrap; /* Ensure nav links stay in a single line */
-    justify-content: space-evenly; /* Distribute evenly */
+    justify-content: space-between; /* Adjust spacing */
     width: 100%;
+    gap: 8px; /* Decrease spacing between links */
   }
 
   .nav-links a {
     font-size: 14px; /* Reduce text size */
-    padding: 6px 10px;
+    padding: 6px 8px; /* Decrease padding */
     display: block;
     text-align: center;
   }
