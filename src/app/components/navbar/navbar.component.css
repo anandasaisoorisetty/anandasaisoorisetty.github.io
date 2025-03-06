@@ -12,8 +12,8 @@
   width: fit-content;
   border-radius: 50px; /* Cylindrical navbar */
   z-index: 1000;
-  margin-top: 20px; /* Increased margin-top */
-  padding: 10px; /* Added padding */
+  margin-top: 20px; /* Default margin for larger screens */
+  padding: 10px; /* Padding added */
 }
 
 /* Navbar Links */
@@ -50,19 +50,19 @@
     width: 100%; /* Full width in smaller screens */
     border-radius: 0; /* Remove rounded edges */
     text-align: center;
+    margin-top: 0; /* Remove margin for smaller screens */
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(3, auto); /* First row: Home, About, Services */
-    grid-template-rows: repeat(2, auto); /* Second row: Experience, Contact */
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
   }
 
-  .nav-links li:nth-child(4),
-  .nav-links li:nth-child(5) {
-    grid-column: span 3; /* Experience & Contact in the second row */
+  .nav-links li {
+    flex: 1 1 40%; /* Ensure two columns */
+    text-align: center;
   }
 
   .nav-links a {
