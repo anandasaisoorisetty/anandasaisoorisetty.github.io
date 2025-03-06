@@ -1,38 +1,44 @@
 /* Navbar Styles */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centers the nav items */
   align-items: center;
-  padding: 15px 10%;
-  background: #333;
-  color: white;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
+  padding: 12px 5%;
+  background: rgba(255, 255, 255, 0.2); /* Transparent glassy effect */
+  backdrop-filter: blur(10px); /* Adds blur effect */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 0px 0px 20px 20px; /* Smooth bottom corners */
 }
 
 /* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  padding: 0;
 }
 
 .nav-links li {
   display: inline-block;
 }
 
+/* Nav Items with Cylindrical Hover Effect */
 .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s;
+  padding: 10px 20px;
+  border-radius: 30px; /* Cylindrical effect */
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .nav-links a:hover {
-  color: #007bff;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }
 
 /* Mobile Menu Button */
@@ -43,6 +49,8 @@
   font-size: 26px;
   border: none;
   cursor: pointer;
+  position: absolute;
+  left: 20px;
 }
 
 /* Responsive Design */
@@ -57,10 +65,11 @@
     position: absolute;
     top: 60px;
     right: 10%;
-    background: #333;
+    background: rgba(0, 0, 0, 0.8);
     padding: 15px;
-    border-radius: 5px;
-    width: 200px;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
   }
 
   .nav-links.active {
@@ -68,7 +77,12 @@
   }
 
   .nav-links li {
-    text-align: center;
     margin-bottom: 10px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    width: 100%;
   }
 }
