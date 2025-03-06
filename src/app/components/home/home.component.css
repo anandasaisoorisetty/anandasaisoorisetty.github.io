@@ -14,16 +14,16 @@ body, html {
 }
 
 /* Home Section */
-/* Home Section - Adjusted for Fixed Header */
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 10% 0; /* Adjusted for fixed header */
+  padding: 80px 10% 0;
   gap: 50px;
   height: calc(100vh - 80px);
   background: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Transparent Cards */
 .service-card, .experience-card {
