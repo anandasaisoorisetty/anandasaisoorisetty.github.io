@@ -1,20 +1,19 @@
 /* Navbar Styles */
 .navbar {
-  position: fixed;
-  top: 10px; /* Adds slight spacing from top */
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  background: rgba(30, 30, 30, 0.8); /* Dark glassy effect */
-  backdrop-filter: blur(10px); /* Adds glass blur effect */
-  border-radius: 50px; /* Cylindrical rectangle */
-  width: auto; /* Auto-fit width based on content */
-  min-width: 60%;
-  max-width: 90%;
+  padding: 12px 5%;
+  background: rgba(0, 0, 0, 0.2); /* Transparent background */
+  backdrop-filter: blur(10px); /* Glassy blur effect */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  border-radius: 50px; /* Cylindrical navbar */
   z-index: 1000;
+  padding: 10px 30px;
 }
 
 /* Navbar Links */
@@ -29,7 +28,7 @@
   display: inline-block;
 }
 
-/* Nav Items - Smooth Hover Effect */
+/* Nav Items with Cylindrical Hover Effect */
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -47,27 +46,24 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 10px;
-    max-width: 95%;
+    width: fit-content;
+    padding: 10px 20px;
   }
 
   .nav-links {
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow wrapping to 2 lines */
     justify-content: center;
-    gap: 15px;
-    width: 100%;
+    text-align: center;
+    gap: 10px;
   }
 
   .nav-links li {
-    width: 45%; /* Show links in two rows */
+    width: 48%; /* Ensure 2 links per line */
+    text-align: center;
   }
 
   .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
+    font-size: 14px; /* Reduce text size for smaller screens */
+    padding: 8px 15px;
   }
 }
