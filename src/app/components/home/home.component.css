@@ -9,6 +9,9 @@ body, html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -186,13 +189,6 @@ body, html {
     width: 90%;
     min-height: auto;
   }
-}
-
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 /* About Section */

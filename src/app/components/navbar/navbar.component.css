@@ -13,16 +13,17 @@
   border-radius: 50px; /* Cylindrical shape */
   z-index: 1000;
   margin-top: 20px; /* Default margin for larger screens */
-  padding: 10px; /* Padding added */
+  padding: 10px; /* Padding for navbar */
 }
 
 /* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Default spacing */
+  flex-wrap: wrap; /* Allows second line if needed */
+  gap: 15px; /* Adjusted spacing */
   padding: 0;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: center; /* Center align */
 }
 
 /* Nav Items with Hover Effect */
@@ -34,7 +35,7 @@
   color: white;
   text-decoration: none;
   font-size: 16px;
-  padding: 8px 15px;
+  padding: 8px 12px; /* Adjusted padding */
   border-radius: 30px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
@@ -44,28 +45,32 @@
   transform: scale(1.1);
 }
 
-/* 📱 Responsive Design - Reduce Spacing in Mobile */
-@media (max-width: 768px) {
+/* 📱 Mobile View - One Line Layout & Adjust to Second Line if Needed */
+@media (max-width: 600px) {
   .navbar {
-    width: 100%; /* Full width */
-    border-radius: 0; /* Remove rounded edges */
+    width: 100%; /* Full width for small screens */
+    border-radius: 0; /* No rounded edges */
     text-align: center;
-    margin-top: 0; /* Remove margin in mobile */
-    padding: 8px; /* Reduce padding */
+    margin-top: 0; /* No margin */
+    padding: 8px; /* Less padding */
   }
 
   .nav-links {
     display: flex;
-    flex-wrap: nowrap; /* Ensure nav links stay in a single line */
-    justify-content: space-between; /* Adjust spacing */
+    flex-wrap: wrap; /* Allows second line if needed */
+    justify-content: center; /* Center alignment */
+    gap: 10px; /* Reduced gap */
     width: 100%;
-    gap: 8px; /* Decrease spacing between links */
+  }
+
+  .nav-links li {
+    flex: 1 1 auto; /* Even spacing */
+    text-align: center;
   }
 
   .nav-links a {
-    font-size: 14px; /* Reduce text size */
-    padding: 6px 8px; /* Decrease padding */
+    font-size: 14px; /* Smaller text */
+    padding: 6px 10px; /* Less padding */
     display: block;
-    text-align: center;
   }
 }
