@@ -44,7 +44,7 @@
   transform: scale(1.1);
 }
 
-/* 📱 Responsive Design - STRICTLY 2 COLUMNS */
+/* 📱 Responsive Design - Swapping Rows & Columns */
 @media (max-width: 768px) {
   .navbar {
     width: 100%; /* Full width in smaller screens */
@@ -55,7 +55,8 @@
 
   .nav-links {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* STRICTLY 2 COLUMNS */
+    grid-template-rows: repeat(2, 1fr); /* 🔹 Now rows instead of columns */
+    grid-template-columns: auto auto; /* 🔹 Swapped with rows */
     gap: 10px;
     width: 100%;
     justify-content: center;
