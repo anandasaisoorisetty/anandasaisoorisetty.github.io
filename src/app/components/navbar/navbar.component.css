@@ -12,7 +12,8 @@
   width: fit-content;
   border-radius: 50px; /* Cylindrical navbar */
   z-index: 1000;
-  margin-top: 10px; /* Added margin-top */
+  margin-top: 20px; /* Increased margin-top */
+  padding: 10px; /* Added padding */
 }
 
 /* Navbar Links */
@@ -21,7 +22,7 @@
   display: flex;
   gap: 20px;
   padding: 0;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: nowrap; /* Prevent wrapping on larger screens */
 }
 
 /* Nav Items with Hover Effect */
@@ -43,22 +44,29 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design - 2 Rows & 2 Columns in Smaller Screens */
+/* Responsive Design - 2 Rows in Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
-    width: fit-content;
+    width: 100%; /* Full width in smaller screens */
+    border-radius: 0; /* Remove rounded edges */
+    text-align: center;
   }
 
   .nav-links {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 Columns */
-    grid-template-rows: repeat(2, auto); /* 2 Rows */
+    grid-template-columns: repeat(3, auto); /* First row: Home, About, Services */
+    grid-template-rows: repeat(2, auto); /* Second row: Experience, Contact */
     gap: 10px;
-    text-align: center;
+    justify-content: center;
+  }
+
+  .nav-links li:nth-child(4),
+  .nav-links li:nth-child(5) {
+    grid-column: span 3; /* Experience & Contact in the second row */
   }
 
   .nav-links a {
-    font-size: 14px; /* Reduce text size for smaller screens */
+    font-size: 14px; /* Reduce text size */
     padding: 6px 12px;
   }
 }
