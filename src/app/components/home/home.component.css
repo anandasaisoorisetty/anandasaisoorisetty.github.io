@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Dark Charcoal Background */
+/* Charcoal Background */
 body, html {
   width: 100%;
   height: 100%;
-  background: #1a1a1a; /* Dark charcoal */
+  background: #1a1a1a;
   color: white;
 }
 
@@ -21,72 +21,14 @@ body, html {
   padding: 0 10%;
   gap: 50px;
   height: calc(100vh - 60px);
-  margin-top: 50px; /* Adds 50px margin gap */
-  background: rgba(0, 0, 0, 0.6); /* Slight transparency */
-}
-
-/* Text Content Styling */
-.home-content {
-  max-width: 50%;
-}
-
-.home h1 {
-  font-size: 42px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.home h2 {
-  font-size: 24px;
-  color: #bbb;
-  margin-bottom: 20px;
-}
-
-.home p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #ddd;
-  margin-bottom: 25px;
-}
-
-/* CTA Buttons */
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn-primary,
-.btn-secondary {
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 6px;
-  display: inline-block;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-}
-
-.btn-secondary {
-  background-color: #f4f4f4;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
-/* Image Styling */
-.home-image img {
-  width: 350px;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* Transparent Cards */
 .service-card, .experience-card {
-  background: rgba(255, 255, 255, 0.1); /* Transparent */
-  backdrop-filter: blur(8px); /* 50% blur */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -98,20 +40,22 @@ body, html {
   border-color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .home {
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 5%;
-    height: auto;
-  }
-
-  .home-content {
-    max-width: 100%;
-  }
-
-  .home-image img {
-    width: 250px;
-  }
+/* Contact Buttons */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  gap: 8px;
+  color: white;
+  transition: opacity 0.3s;
 }
+
+.whatsapp-btn { background: #25d366; }
+.email-btn { background: #d44638; }
+
+.contact-btn:hover { opacity: 0.9; }

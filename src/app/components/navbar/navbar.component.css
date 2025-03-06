@@ -4,8 +4,8 @@
   justify-content: center; /* Centers the nav items */
   align-items: center;
   padding: 12px 5%;
-  background: rgba(255, 255, 255, 0.2); /* Transparent glassy effect */
-  backdrop-filter: blur(10px); /* Adds blur effect */
+  background: rgba(0, 0, 0, 0.8); /* Charcoal Background */
+  backdrop-filter: blur(10px); /* Glassy Effect */
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +32,7 @@
   text-decoration: none;
   font-size: 18px;
   padding: 10px 20px;
-  border-radius: 30px; /* Cylindrical effect */
+  border-radius: 30px; /* Cylindrical Effect */
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
