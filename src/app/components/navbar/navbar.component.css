@@ -44,7 +44,7 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design - 2 Rows in Smaller Screens */
+/* Responsive Design - STRICTLY 2 LINES & 2 COLUMNS */
 @media (max-width: 768px) {
   .navbar {
     width: 100%; /* Full width in smaller screens */
@@ -54,19 +54,21 @@
   }
 
   .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* STRICTLY 2 COLUMNS */
     gap: 10px;
+    text-align: center;
+    width: 100%;
   }
 
   .nav-links li {
-    flex: 1 1 40%; /* Ensure two columns */
-    text-align: center;
+    width: 100%;
   }
 
   .nav-links a {
     font-size: 14px; /* Reduce text size */
     padding: 6px 12px;
+    display: block;
+    width: 100%;
   }
 }
