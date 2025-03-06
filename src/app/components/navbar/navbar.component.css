@@ -44,7 +44,9 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design - STRICTLY 2 LINES & 2 COLUMNS */
+/* 📱 Responsive Design - STRICTLY 2 COLUMNS */
+/* 1st Column (3 Rows) - Home, About, Services */
+/* 2nd Column (2 Rows) - Experience, Contact */
 @media (max-width: 768px) {
   .navbar {
     width: 100%; /* Full width in smaller screens */
@@ -55,14 +57,23 @@
 
   .nav-links {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* STRICTLY 2 COLUMNS */
+    grid-template-columns: repeat(2, 1fr); /* EXACTLY 2 COLUMNS */
+    grid-template-rows: auto auto auto; /* Adjusted for 3 rows in 1st col, 2 rows in 2nd col */
     gap: 10px;
     text-align: center;
     width: 100%;
   }
 
-  .nav-links li {
-    width: 100%;
+  /* Assign items to correct positions */
+  .nav-links li:nth-child(1),  /* Home */
+  .nav-links li:nth-child(2),  /* About */
+  .nav-links li:nth-child(3) { /* Services */
+    grid-column: 1; /* First column */
+  }
+
+  .nav-links li:nth-child(4),  /* Experience */
+  .nav-links li:nth-child(5) { /* Contact */
+    grid-column: 2; /* Second column */
   }
 
   .nav-links a {
