@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 5%;
+  padding: 20px 5%;
   background: rgba(0, 0, 0, 0.2); /* Transparent background */
   backdrop-filter: blur(10px); /* Glassy blur effect */
   position: fixed;
@@ -13,8 +13,6 @@
   width: fit-content;
   border-radius: 50px; /* Cylindrical navbar */
   z-index: 1000;
-  padding-top: 10px; /* Added top padding */
-  padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -47,7 +45,7 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design */
+/* Responsive Design - 2 Lines in Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
     width: fit-content;
@@ -56,13 +54,21 @@
   }
 
   .nav-links {
-    flex-direction: row; /* Ensure links remain side by side */
+    flex-wrap: wrap; /* Allows wrapping into two lines */
     justify-content: center;
     gap: 10px;
+    text-align: center;
+    max-width: 250px; /* Adjust as needed */
+  }
+
+  .nav-links li {
+    width: 50%; /* Ensures 2 links per row */
+    text-align: center;
   }
 
   .nav-links a {
     font-size: 14px; /* Reduce text size for smaller screens */
     padding: 6px 12px;
+    display: block; /* Ensures full width usage */
   }
 }
