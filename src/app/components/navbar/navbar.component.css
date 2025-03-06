@@ -4,13 +4,13 @@
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.2); /* Transparent background */
-  backdrop-filter: blur(10px); /* Glassy blur effect */
+  backdrop-filter: blur(10px); /* Glassy effect */
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
-  border-radius: 50px; /* Cylindrical navbar */
+  border-radius: 50px; /* Cylindrical shape */
   z-index: 1000;
   margin-top: 20px; /* Default margin for larger screens */
   padding: 10px; /* Padding added */
@@ -22,7 +22,7 @@
   display: flex;
   gap: 20px;
   padding: 0;
-  flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 /* Nav Items with Hover Effect */
@@ -44,27 +44,26 @@
   transform: scale(1.1);
 }
 
-/* 📱 Responsive Design - Swapping Rows & Columns */
+/* 📱 Responsive Design - Single Line & Full Width in Mobile */
 @media (max-width: 768px) {
   .navbar {
-    width: 100%; /* Full width in smaller screens */
+    width: 100%; /* Full width */
     border-radius: 0; /* Remove rounded edges */
     text-align: center;
-    margin-top: 0; /* Remove margin for smaller screens */
+    margin-top: 0; /* Remove margin in mobile */
+    padding: 10px; /* Maintain padding */
   }
 
   .nav-links {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr); /* 🔹 Now rows instead of columns */
-    grid-template-columns: auto auto; /* 🔹 Swapped with rows */
-    gap: 10px;
+    display: flex;
+    flex-wrap: nowrap; /* Ensure nav links stay in a single line */
+    justify-content: space-evenly; /* Distribute evenly */
     width: 100%;
-    justify-content: center;
   }
 
   .nav-links a {
     font-size: 14px; /* Reduce text size */
-    padding: 6px 12px;
+    padding: 6px 10px;
     display: block;
     text-align: center;
   }
