@@ -5,25 +5,15 @@
   box-sizing: border-box;
 }
 
+/* Dark Charcoal Background */
 body, html {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  background: #1a1a1a; /* Dark charcoal */
+  color: white;
 }
 
-/* Navbar - Fixed at the top */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: white;
-  z-index: 1000;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Home Section - Clean Layout */
+/* Home Section */
 .home {
   display: flex;
   align-items: center;
@@ -31,7 +21,8 @@ body, html {
   padding: 0 10%;
   gap: 50px;
   height: calc(100vh - 60px);
-  margin-top: 0;
+  margin-top: 50px; /* Adds 50px margin gap */
+  background: rgba(0, 0, 0, 0.6); /* Slight transparency */
 }
 
 /* Text Content Styling */
@@ -47,17 +38,18 @@ body, html {
 
 .home h2 {
   font-size: 24px;
-  color: #555;
+  color: #bbb;
   margin-bottom: 20px;
 }
 
 .home p {
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
+  color: #ddd;
   margin-bottom: 25px;
 }
 
+/* CTA Buttons */
 .cta-buttons {
   display: flex;
   gap: 15px;
@@ -87,11 +79,26 @@ body, html {
 .home-image img {
   width: 350px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Design - Mobile */
+/* Transparent Cards */
+.service-card, .experience-card {
+  background: rgba(255, 255, 255, 0.1); /* Transparent */
+  backdrop-filter: blur(8px); /* 50% blur */
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+.service-card:hover, .experience-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
@@ -106,451 +113,5 @@ body, html {
 
   .home-image img {
     width: 250px;
-  }
-}
-
-/* Center Buttons on Smaller Screens */
-@media (max-width: 768px) {
-  .home-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .home-buttons a {
-    width: 80%;
-    margin-bottom: 10px;
-  }
-}
-
-/* About Section */
-.about {
-  text-align: center;
-  padding: 80px 10%;
-  background: #f9f9f9;
-}
-
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 16px;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-
-/* Skills Section */
-.skills {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Skill Card Styling */
-.skill-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid #ddd;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  min-height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.skill-card:hover {
-  transform: scale(1.05);
-  border-color: #007bff;
-}
-
-.skill-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.skill-card p {
-  font-size: 14px;
-  color: #666;
-  margin-top: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about {
-    padding: 50px 5%;
-  }
-
-  .skills {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skill-card {
-    width: 90%;
-    min-height: auto;
-  }
-}
-
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* About Section */
-.about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 15%;
-  background: linear-gradient(to bottom, #ffffff, #f5f5f5);
-}
-
-.about-content {
-  max-width: 700px;
-}
-
-.about h2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.about p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #444;
-  font-weight: 400;
-}
-
-/* Services Section */
-.services {
-  text-align: center;
-  padding: 80px 10%;
-  background: #ffffff;
-}
-
-.services h2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.services p {
-  font-size: 16px;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  font-weight: 400;
-}
-
-/* Service Cards in One Row - Prevent Scrolling */
-.service-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-}
-
-/* Individual Service Card */
-.service-card {
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-  text-align: center;
-  transition: border-color 0.3s ease-in-out;
-  min-height: 200px;
-  width: 23%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.service-card:hover {
-  border-color: #007bff;
-}
-
-.service-card h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.service-card p {
-  font-size: 15px;
-  color: #666;
-  font-weight: 400;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .service-cards {
-    flex-wrap: wrap;
-  }
-
-  .service-card {
-    width: 48%;
-  }
-}
-
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 10%;
-  }
-
-  .services {
-    padding: 50px 5%;
-  }
-
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card {
-    width: 100%;
-  }
-}
-
-/* Experience Section */
-.experience {
-  text-align: center;
-  padding: 80px 10%;
-  background: #f9f9f9;
-}
-
-.experience h2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-/* Experience Grid */
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Individual Experience Card */
-.experience-card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-  text-align: left;
-  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.experience-card:hover {
-  transform: scale(1.05);
-  border-color: #007bff;
-}
-
-.experience-card h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.experience-card p {
-  font-size: 16px;
-  color: #666;
-  font-weight: 400;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .experience {
-    padding: 50px 5%;
-  }
-
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Contact Section */
-.contact {
-  text-align: center;
-  padding: 80px 10%;
-  background: #ffffff;
-}
-
-.contact h2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.contact p {
-  font-size: 18px;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  font-weight: 400;
-}
-
-/* Contact Info */
-.contact-info {
-  margin-bottom: 20px;
-}
-
-/* Contact Buttons Container */
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* Contact Buttons */
-.contact-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 10px 20px; /* Same padding for both buttons */
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 16px;
-  gap: 8px;
-  color: white;
-  transition: opacity 0.3s;
-  min-width: 160px; /* Consistent width for both buttons */
-}
-
-.whatsapp-btn {
-  background: #25d366;
-}
-
-.email-btn {
-  background: #d44638;
-}
-
-.contact-btn:hover {
-  opacity: 0.9;
-}
-
-/* Contact Icon */
-.contact-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain; /* Preserve icon shape */
-  filter: brightness(0) invert(1); /* White icons */
-}
-
-.mail-icon {
-  width: 30px; /* Larger Mail icon */
-  height: 30px;
-}
-
-/* Social Media Links */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px;
-  gap: 6px;
-  color: white;
-  transition: opacity 0.3s;
-  min-width: 120px; /* Smaller than contact-btn */
-}
-
-.social-icon-img {
-  width: 20px; /* Actual size may vary; adjust if needed */
-  height: 20px;
-  object-fit: contain; /* Preserve icon shape */
-  filter: brightness(0) invert(1); /* White icons */
-}
-
-.linkedin {
-  background: #0077b5;
-}
-
-.github {
-  background: #181717;
-}
-
-.behance {
-  background: #1769ff;
-}
-
-.social-btn:hover {
-  opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact {
-    padding: 50px 5%;
-  }
-
-  .contact-buttons {
-    gap: 10px;
-  }
-
-  .contact-btn {
-    padding: 8px 16px;
-    font-size: 14px;
-    min-width: 140px;
-  }
-
-  .contact-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .mail-icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .social-btn {
-    padding: 6px 10px;
-    font-size: 12px;
-    min-width: 100px;
-  }
-
-  .social-icon-img {
-    width: 18px;
-    height: 18px;
   }
 }
