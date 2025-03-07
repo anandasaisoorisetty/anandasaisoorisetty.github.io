@@ -123,22 +123,37 @@ body, html {
 /* About Section */
 .about {
   text-align: center;
-  padding: 80px 10%;
+  padding: 80px 15%;
   background: #050914;
-  color: #B1AABA;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #B536E0;
 }
 
 .about p {
-  font-size: 16px;
-  color: #333;
+  color: #B1AABA;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
   max-width: 800px;
   margin: 0 auto 30px;
 }
+
+
+/* About Section */
+
+.about-content {
+  max-width: 700px;
+}
+
 
 /* Skills Section */
 .skills {
@@ -196,34 +211,6 @@ body, html {
   }
 }
 
-/* About Section */
-.about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 15%;
-  background: #050914;
-  color: #B1AABA;
-}
-
-.about-content {
-  max-width: 700px;
-}
-
-.about h2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.about p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #444;
-  font-weight: 400;
-}
 
 /* Services Section */
 .services {
@@ -330,7 +317,7 @@ body, html {
   font-size: 38px;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #333;
+  color: #B536E0;
 }
 
 /* Experience Grid */
