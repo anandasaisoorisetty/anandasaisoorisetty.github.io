@@ -255,7 +255,7 @@ body, html {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #ddd;
+  border: 2px solid #854836;
   text-align: center;
   transition: border-color 0.3s ease-in-out;
   min-height: 200px;
@@ -268,7 +268,6 @@ body, html {
 
 .service-card:hover {
   border: 2px solid #FFB22C;
-  transform: scale(1.05);
 }
 
 .service-card h3 {
@@ -362,7 +361,7 @@ body, html {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #222;
+  color: #F7F7F7
 }
 
 .experience-card p {
