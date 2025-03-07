@@ -44,6 +44,12 @@
   transform: scale(1.1);
 }
 
+.nav-links a.active {
+  color: #FFB22C; /* Primary color for active section */
+  font-weight: bold;
+  border-bottom: 2px solid #FFB22C;
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
