@@ -15,6 +15,7 @@
   max-width: 100%;
   z-index: 1000;
   border-radius: 20px; /* Cylindrical navbar */
+  border-color: #FFB22C;
 }
 
 
