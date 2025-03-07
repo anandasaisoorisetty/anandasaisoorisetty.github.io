@@ -7,9 +7,10 @@
   background: rgba(255, 255, 255, 0.2); /* Transparent glassy effect */
   backdrop-filter: blur(10px);
   position: fixed;
-  top: 20px; /* Margin top */
+  top: 20px; /* Margin top in larger screens */
   left: 0;
-  width: 100%;
+  width: fit-content; /* Fit width in larger screens */
+  max-width: 100%;
   z-index: 1000;
   border-radius: 20px; /* Cylindrical navbar */
 }
@@ -44,7 +45,9 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 10px;
-    width: 100%;
+    width: 100%; /* Full width in smaller screens */
+    top: 0; /* Removed margin-top */
+    border-radius: 0px; /* Remove rounded corners for full width */
   }
 
   .nav-links {
