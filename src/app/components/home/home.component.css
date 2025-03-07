@@ -24,6 +24,8 @@ body, html {
   gap: 50px;
   height: calc(100vh - 80px);
   margin-top: 0;
+  background: #050914;
+  color: #B1AABA;
 }
 
 /* Text Content Styling */
@@ -120,7 +122,8 @@ body, html {
 .about {
   text-align: center;
   padding: 80px 10%;
-  background: #f9f9f9;
+  background: #050914;
+  color: #B1AABA;
 }
 
 .about h2 {
@@ -316,7 +319,8 @@ body, html {
 .experience {
   text-align: center;
   padding: 80px 10%;
-  background: #f9f9f9;
+  background: #050914;
+  color: #B1AABA;
 }
 
 .experience h2 {
