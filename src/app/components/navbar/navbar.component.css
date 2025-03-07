@@ -1,32 +1,27 @@
-/* Navbar Styles */
+/* Navbar - Default Styles */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.2); /* Transparent background */
-  backdrop-filter: blur(10px); /* Glassy effect */
+  padding: 10px 5%;
+  background: rgba(255, 255, 255, 0.2); /* Transparent glassy effect */
+  backdrop-filter: blur(10px);
   position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  border-radius: 50px; /* Cylindrical shape */
+  top: 20px; /* Margin top */
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  margin-top: 20px; /* Default margin for larger screens */
-  padding: 10px; /* Padding for navbar */
+  border-radius: 20px; /* Cylindrical navbar */
 }
 
 /* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Allows second line if needed */
-  gap: 15px; /* Adjusted spacing */
+  gap: 30px; /* Default padding for large screens */
   padding: 0;
-  justify-content: center; /* Center align */
 }
 
-/* Nav Items with Hover Effect */
 .nav-links li {
   display: inline-block;
 }
@@ -34,8 +29,8 @@
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
-  padding: 8px 12px; /* Adjusted padding */
+  font-size: 18px;
+  padding: 12px 20px; /* Default padding */
   border-radius: 30px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
@@ -45,32 +40,26 @@
   transform: scale(1.1);
 }
 
-/* 📱 Mobile View - One Line Layout & Adjust to Second Line if Needed */
-@media (max-width: 600px) {
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
   .navbar {
-    width: 100%; /* Full width for small screens */
-    border-radius: 0; /* No rounded edges */
-    text-align: center;
-    margin-top: 0; /* No margin */
-    padding: 8px; /* Less padding */
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap; /* Allows second line if needed */
-    justify-content: center; /* Center alignment */
-    gap: 10px; /* Reduced gap */
+    padding: 10px;
     width: 100%;
   }
 
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Reduce gap */
+  }
+
   .nav-links li {
-    flex: 1 1 auto; /* Even spacing */
-    text-align: center;
+    display: inline-block;
+    width: auto;
   }
 
   .nav-links a {
-    font-size: 14px; /* Smaller text */
-    padding: 6px 10px; /* Less padding */
-    display: block;
+    padding: 14px 25px; /* Increase padding */
+    font-size: 16px;
   }
 }
