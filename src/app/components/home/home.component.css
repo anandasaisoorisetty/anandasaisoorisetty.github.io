@@ -115,6 +115,7 @@ body, html {
     text-align: center;
     padding: 50px 5%;
     height: auto;
+    top: 30px;
   }
 
   .home-content {
