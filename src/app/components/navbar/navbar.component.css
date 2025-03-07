@@ -51,6 +51,7 @@
     width: 100%; /* Full width in smaller screens */
     top: 0; /* Removed margin-top */
     left: 0;
+    margin-bottom: 20px;
     transform: none; /* Remove centering */
     border-radius: 0px; /* Remove rounded corners for full width */
   }
