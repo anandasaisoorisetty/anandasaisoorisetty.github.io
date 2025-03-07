@@ -55,6 +55,19 @@ body, html {
   margin-bottom: 25px;
 }
 
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.cta-buttons a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
 .cta-buttons a {
   padding: 12px 20px;
   text-decoration: none;
