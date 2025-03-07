@@ -113,7 +113,7 @@ body, html {
   .home {
     flex-direction: column;
     text-align: center;
-    padding: 70px 5%;
+    padding: 90px 5% 50px 5%;
     height: auto;
     top: 60px;
   }
@@ -219,7 +219,7 @@ body, html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .about {
-    padding: 50px 5%;
+    padding: 90px 5% 50px 5%;
   }
 
   .skills {
@@ -310,11 +310,11 @@ body, html {
 
 @media (max-width: 768px) {
   .about {
-    padding: 60px 10%;
+    padding: 90px 10% 50px 10%;
   }
 
   .services {
-    padding: 50px 5%;
+    padding: 90px 5% 50px 5%;
   }
 
   .service-cards {
@@ -387,7 +387,7 @@ body, html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .experience {
-    padding: 50px 5%;
+    padding: 90px 5% 50px 5%;
   }
 
   .experience-grid {
@@ -536,7 +536,7 @@ body, html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact {
-    padding: 50px 5%;
+    padding: 90px 5% 50px 5%;
   }
 
   .contact-buttons {
