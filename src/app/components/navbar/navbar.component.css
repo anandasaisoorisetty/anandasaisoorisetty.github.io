@@ -3,8 +3,9 @@
   display: flex;
   justify-content: center; /* Centered navbar */
   align-items: center;
-  padding: 10px 5%;
-  background: rgba(255, 255, 255, 0.2); /* Transparent glassy effect */
+  text-align: center;
+  padding: 15px 5%;
+  background: rgba(0, 0, 0, 0.7); /* Transparent glassy effect */
   backdrop-filter: blur(10px);
   position: fixed;
   top: 20px; /* Margin top in larger screens */
@@ -15,6 +16,7 @@
   z-index: 1000;
   border-radius: 20px; /* Cylindrical navbar */
 }
+
 
 /* Navbar Links */
 .nav-links {
@@ -29,7 +31,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #F7F7F7;
   text-decoration: none;
   font-size: 18px;
   padding: 10px 20px; /* Default padding */
@@ -38,7 +40,7 @@
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.3);
+  color: #FFB22C;
   transform: scale(1.1);
 }
 
