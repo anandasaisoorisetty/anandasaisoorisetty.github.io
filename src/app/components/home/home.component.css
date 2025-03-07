@@ -113,6 +113,7 @@ body, html {
   .home {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     padding: 90px 5% 50px 5%;
     height: auto;
     top: 60px;
