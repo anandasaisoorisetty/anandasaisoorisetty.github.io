@@ -396,6 +396,10 @@ body, html {
   font-weight: 400;
 }
 
+.experience-card p:hover {
+  color: #FFB22C;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .experience {
