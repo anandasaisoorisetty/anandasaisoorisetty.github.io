@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none; 
+  user-select: none;
 }
 
 body, html {
@@ -77,14 +77,6 @@ body, html {
   transition: 0.3s;
 }
 
-.cta-buttons a {
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
 .btn-primary,
 .btn-secondary {
   padding: 12px 20px;
@@ -148,6 +140,7 @@ body, html {
     align-items: center;
     text-align: center;
     justify-items: center;
+    gap: 10px 0;
   }
 
   .home-buttons a {

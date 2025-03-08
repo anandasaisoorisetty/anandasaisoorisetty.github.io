@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1741441526102,
+  "timestamp": 1741442155327,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "/index.html",
-        "/main.d4e0c04b0c013789.js",
+        "/main.0f0661d44073387a.js",
         "/polyfills.b97a24e97c5f07cf.js",
         "/runtime.c66cebb6b694f722.js",
         "/styles.4476f7949423712c.css"
@@ -53,8 +53,8 @@
     "/assets/mail.svg": "e7201633cd6441ebfc3f2af46b7237ceb2c6bcd5",
     "/assets/profile.png": "7fd4bff5a2192ac826e6b740260ac53cf9e8fff0",
     "/assets/whatsapp.svg": "f889b477cf3fa265e4c9f10b8185aad0c3fb4d1b",
-    "/index.html": "e751c22e9984382ad160a1c8ae8a3fb3262d147e",
-    "/main.d4e0c04b0c013789.js": "d7dc6cf69c456b829dc47878e6530f63611a3622",
+    "/index.html": "d8630516d10970d871c698fdd907e182b98d7b79",
+    "/main.0f0661d44073387a.js": "760008bf3a8f70deb74256db818db3bded55e62a",
     "/polyfills.b97a24e97c5f07cf.js": "0e6eed11bb45b55fade3782d7155e0bf69bf88c2",
     "/runtime.c66cebb6b694f722.js": "eb51987edc61bf2099b0827fd66feaa34dc7facf",
     "/styles.4476f7949423712c.css": "053e5ede52a6db268cf420228536d2312c43d019"
