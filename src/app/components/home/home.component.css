@@ -474,12 +474,12 @@ body, html {
 
 .whatsapp-btn {
   background: #FFB22C;
-  color: #854836;
+  color: #000000;
 }
 
 .email-btn {
   background: #FFB22C;
-  color: #854836;
+  color: #000000;
 }
 
 .whatsapp-btn:hover, .email-btn:hover {
@@ -495,13 +495,13 @@ body, html {
   width: 24px;
   height: 24px;
   object-fit: contain; /* Preserve icon shape */
-  fill: #854836;
+  filter: brightness(0);
 }
 
 .mail-icon {
   width: 30px; /* Larger Mail icon */
   height: 30px;
-  color: #854836;
+  filter: brightness(0);
 }
 
 /* Social Media Links */
@@ -524,7 +524,7 @@ body, html {
   font-weight: bold;
   font-size: 14px;
   gap: 6px;
-  color: #FFB22C;
+  color: #ffffff;
   transition: opacity 0.3s;
   min-width: 120px; /* Smaller than contact-btn */
 }
@@ -533,7 +533,7 @@ body, html {
   width: 20px; /* Actual size may vary; adjust if needed */
   height: 20px;
   object-fit: contain; /* Preserve icon shape */
-  fill: #854836;
+  filter: brightness(0) invert(1);
 }
 
 .linkedin {
