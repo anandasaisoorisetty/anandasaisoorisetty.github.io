@@ -495,7 +495,6 @@ body, html {
   width: 24px;
   height: 24px;
   object-fit: contain; /* Preserve icon shape */
-  filter: brightness(0) invert(1); /* White icons */
   fill: #854836;
 }
 
@@ -534,7 +533,6 @@ body, html {
   width: 20px; /* Actual size may vary; adjust if needed */
   height: 20px;
   object-fit: contain; /* Preserve icon shape */
-  filter: brightness(0) invert(1); /* White icons */
   fill: #854836;
 }
 
