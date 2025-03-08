@@ -496,7 +496,7 @@ body, html {
   height: 24px;
   object-fit: contain; /* Preserve icon shape */
   filter: brightness(0) invert(1); /* White icons */
-  color: #854836;
+  fill: #854836;
 }
 
 .mail-icon {
@@ -535,7 +535,7 @@ body, html {
   height: 20px;
   object-fit: contain; /* Preserve icon shape */
   filter: brightness(0) invert(1); /* White icons */
-  color: #854836;
+  fill: #854836;
 }
 
 .linkedin {
