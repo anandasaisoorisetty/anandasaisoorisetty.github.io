@@ -148,6 +148,25 @@ body, html {
     margin-bottom: 10px;
     gap: 40px 0;
   }
+
+  /* Center Buttons on Smaller Screens */
+@media (max-width: 768px) {
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between buttons */
+  }
+
+  .cta-buttons a {
+    width: 80%; /* Makes buttons full width on smaller screens */
+    max-width: 250px; /* Prevents buttons from being too large */
+    text-align: center;
+  }
+}
+
 }
 
 /* About Section */
