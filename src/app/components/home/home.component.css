@@ -463,10 +463,11 @@ body, html {
   text-decoration: none;
   padding: 10px 20px; /* Same padding for both buttons */
   border-radius: 5px;
+  border: solid 1px #854836;
   font-weight: bold;
   font-size: 16px;
   gap: 8px;
-  color: white;
+  color: #854836;
   transition: opacity 0.3s;
   min-width: 160px; /* Consistent width for both buttons */
 }
@@ -518,10 +519,11 @@ body, html {
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 5px;
+  border: #FFB22C 1px solid;
   font-weight: bold;
   font-size: 14px;
   gap: 6px;
-  color: white;
+  color: #FFB22C;
   transition: opacity 0.3s;
   min-width: 120px; /* Smaller than contact-btn */
 }
