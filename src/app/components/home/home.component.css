@@ -474,12 +474,12 @@ body, html {
 
 .whatsapp-btn {
   background: #FFB22C;
-  color: #FFFFFF;
+  color: #854836;
 }
 
 .email-btn {
   background: #FFB22C;
-  color: #FFFFFF;
+  color: #854836;
 }
 
 .whatsapp-btn:hover, .email-btn:hover {
@@ -496,11 +496,13 @@ body, html {
   height: 24px;
   object-fit: contain; /* Preserve icon shape */
   filter: brightness(0) invert(1); /* White icons */
+  color: #854836;
 }
 
 .mail-icon {
   width: 30px; /* Larger Mail icon */
   height: 30px;
+  color: #854836;
 }
 
 /* Social Media Links */
@@ -533,6 +535,7 @@ body, html {
   height: 20px;
   object-fit: contain; /* Preserve icon shape */
   filter: brightness(0) invert(1); /* White icons */
+  color: #854836;
 }
 
 .linkedin {
