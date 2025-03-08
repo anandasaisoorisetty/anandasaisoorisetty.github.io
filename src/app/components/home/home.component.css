@@ -381,7 +381,6 @@ body, html {
 .experience-card:hover {
   border-color: #FFB22C;
   transform: scale(1.05);
-  color: #FFB22C;
 }
 
 .experience-card h3 {
@@ -397,7 +396,7 @@ body, html {
   font-weight: 400;
 }
 
-.experience-card p:hover {
+.experience-card, p:hover {
   color: #FFB22C;
 }
 
