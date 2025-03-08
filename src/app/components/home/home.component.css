@@ -36,7 +36,9 @@ body, html {
 }
 
 .home h4 {
+  font-size: 24px;
   color: #F7F7F7;
+  margin-bottom: 10px;
 }
 
 
