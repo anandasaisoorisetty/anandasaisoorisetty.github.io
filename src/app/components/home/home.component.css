@@ -113,7 +113,7 @@ body, html {
   height: auto;
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid #854836;
+  border: 2px solid #854836;
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
@@ -127,6 +127,10 @@ body, html {
     height: auto;
     top: 60px;
     align-items: center;
+  }
+
+  .home h4 {
+    text-align: left;
   }
 
   .home-content {
