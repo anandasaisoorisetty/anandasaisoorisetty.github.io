@@ -35,6 +35,11 @@ body, html {
   max-width: 50%;
 }
 
+.home h4 {
+  color: #F7F7F7;
+}
+
+
 .home h1 {
   font-size: 42px;
   font-weight: bold;
@@ -106,6 +111,8 @@ body, html {
   height: auto;
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #854836;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 /* Responsive Design - Mobile */
@@ -117,6 +124,7 @@ body, html {
     padding: 90px 5% 50px 5%;
     height: auto;
     top: 60px;
+    align-items: center;
   }
 
   .home-content {
@@ -358,8 +366,8 @@ body, html {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #854836;
   text-align: left;
+  border: 2px solid #854836;
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
   min-height: 180px;
   display: flex;
