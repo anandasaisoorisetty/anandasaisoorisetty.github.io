@@ -472,12 +472,12 @@ body, html {
 }
 
 .whatsapp-btn {
-  background: #25D366;
+  background: #FFB22C;
   color: #FFFFFF;
 }
 
 .email-btn {
-  background: #D44638;
+  background: #FFB22C;
   color: #FFFFFF;
 }
 
@@ -534,15 +534,15 @@ body, html {
 }
 
 .linkedin {
-  background: #0077b5;
+  background: #854836;
 }
 
 .github {
-  background: #181717;
+  background: #854836;
 }
 
 .behance {
-  background: #1769ff;
+  background: #854836;
 }
 
 .social-btn:hover {
