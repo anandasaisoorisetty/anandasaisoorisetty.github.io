@@ -396,7 +396,7 @@ body, html {
   font-weight: 400;
 }
 
-.experience-card:hover p:hover {
+.experience-card:hover p {
   color: #FFB22C;
 }
 
