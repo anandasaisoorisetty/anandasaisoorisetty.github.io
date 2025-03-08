@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1741440179955,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main.8b9a779eef531c31.js",
+        "/polyfills.b97a24e97c5f07cf.js",
+        "/runtime.c66cebb6b694f722.js",
+        "/styles.4476f7949423712c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/behance.svg",
+        "/assets/finance.jpg",
+        "/assets/github.svg",
+        "/assets/icon-192.png",
+        "/assets/icon-512.png",
+        "/assets/icon.svg",
+        "/assets/linkedin.svg",
+        "/assets/mail.svg",
+        "/assets/profile.png",
+        "/assets/whatsapp.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/behance.svg": "bc763a601f0304fcc313f6a08e64751f20100ca0",
+    "/assets/finance.jpg": "b1b1f436ba3f144e504f27e5b9acd4126db5d12f",
+    "/assets/github.svg": "cf9bf24d3153100184758e30febd687ee4512393",
+    "/assets/icon-192.png": "3dc819f13eb2833ea77ac2c0c43222ad47d42dc2",
+    "/assets/icon-512.png": "cb806870fa032cfa824db33f9b16b0a5d03c9970",
+    "/assets/icon.svg": "0cb71d9bef948168132ec35967919618975e8796",
+    "/assets/linkedin.svg": "d5e3995a6cffe2fdc9ca561baff23ee7f640a77e",
+    "/assets/mail.svg": "e7201633cd6441ebfc3f2af46b7237ceb2c6bcd5",
+    "/assets/profile.png": "7fd4bff5a2192ac826e6b740260ac53cf9e8fff0",
+    "/assets/whatsapp.svg": "f889b477cf3fa265e4c9f10b8185aad0c3fb4d1b",
+    "/index.html": "ca8c7260d9c74cd4b30fd65151adecf0ae65139a",
+    "/main.8b9a779eef531c31.js": "cb3cc18167d99d32112ac5e3d499b501e6232a1d",
+    "/polyfills.b97a24e97c5f07cf.js": "0e6eed11bb45b55fade3782d7155e0bf69bf88c2",
+    "/runtime.c66cebb6b694f722.js": "eb51987edc61bf2099b0827fd66feaa34dc7facf",
+    "/styles.4476f7949423712c.css": "053e5ede52a6db268cf420228536d2312c43d019"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

@@ -30,7 +30,9 @@
               }
             ],
             "styles": ["src/styles.css"],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -38,6 +40,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
+              "serviceWorker": true,
               "extractLicenses": true,
               "budgets": [
                 {
