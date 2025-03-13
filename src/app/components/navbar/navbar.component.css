@@ -95,10 +95,10 @@
 .move-to-top {
   display: none; /* Hidden by default */
   position: fixed;
-  bottom: 20px; /* Always bottom-right */
+  bottom: 20px; /* Bottom-right on all screens */
   right: 20px;
-  background: none; /* Remove circle */
-  border: none; /* Remove border */
+  background: none; /* No circle */
+  border: none; /* No border */
   cursor: pointer;
   z-index: 1000;
   transition: opacity 0.3s ease;
@@ -112,10 +112,8 @@
 }
 
 .move-to-top .arrow-up {
-  color: #FFB22C; /* Primary color */
-  font-size: 30px; /* Larger size */
-  font-weight: bold; /* Increase stroke/thickness */
-  line-height: 1; /* Remove extra spacing */
+  width: 30px; /* SVG size */
+  height: 30px;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -187,12 +185,13 @@
 
   /* Adjust Move to Top Button for Smaller Screens */
   .move-to-top {
-    bottom: 15px; /* Slightly closer to edge */
+    bottom: 15px; /* Consistent bottom-right */
     right: 15px;
   }
 
   .move-to-top .arrow-up {
-    font-size: 24px; /* Slightly smaller for mobile */
+    width: 24px; /* Slightly smaller for mobile */
+    height: 24px;
   }
 }
 
