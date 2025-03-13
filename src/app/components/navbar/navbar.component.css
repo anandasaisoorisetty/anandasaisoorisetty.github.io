@@ -91,6 +91,34 @@
   bottom: -8px;
 }
 
+/* Move to Top Button */
+.move-to-top {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Slight glassy effect */
+  border: 1px solid #FFB22C;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Hidden initially */
+}
+
+.move-to-top.visible {
+  display: block;
+  opacity: 1; /* Visible when scrolled */
+}
+
+.move-to-top .arrow-up {
+  color: #FFB22C; /* Primary color */
+  font-size: 24px;
+  line-height: 40px; /* Center vertically */
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
@@ -112,7 +140,6 @@
     padding: 20px 10px 15px 10px; /* Increased padding-top for gap */
     margin-top: 15px; /* Kept for additional spacing */
     left: 15px;
-    animation: slideInFromLeft 0.5s ease-in-out forwards; /* Animation on load */
   }
 
   /* Nav Links Hidden by Default */
@@ -158,9 +185,26 @@
     width: 35px; /* Full width for animation */
     transform: rotate(-45deg) translate(5px, -5px);
   }
+
+  /* Adjust Move to Top Button for Smaller Screens */
+  .move-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .move-to-top .arrow-up {
+    font-size: 20px;
+    line-height: 35px;
+  }
 }
 
 /* Animation for Toggle Button */
+.nav-toggle.animate {
+  animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);

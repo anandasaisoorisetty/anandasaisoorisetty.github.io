@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent implements OnInit {
   activeSection: string = '';
   isNavOpen: boolean = false; // Toggle state
+  showMoveToTop: boolean = false; // Move to top visibility
 
   ngOnInit() {
     this.observeSections();
@@ -55,11 +56,20 @@ export class NavbarComponent implements OnInit {
   }
 
   triggerToggleAnimation() {
-    const toggle = document.querySelector('.nav-toggle') as HTMLElement; // Typecast to HTMLElement
+    const toggle = document.querySelector('.nav-toggle') as HTMLElement;
     if (toggle && window.innerWidth <= 768) {
       toggle.classList.remove('animate'); // Reset animation
-      void toggle.offsetWidth; // Trigger reflow (now valid with HTMLElement)
+      void toggle.offsetWidth; // Trigger reflow
       toggle.classList.add('animate'); // Re-apply animation
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.showMoveToTop = window.scrollY > 200; // Show button after scrolling 200px
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
   }
 }

@@ -13,4 +13,9 @@
     <li><a href="#experience" [class.active]="isActive('experience')" (click)="closeNav()">Experience</a></li>
     <li><a href="#contact" [class.active]="isActive('contact')" (click)="closeNav()">Contact</a></li>
   </ul>
+
+  <!-- Move to Top Button -->
+  <button class="move-to-top" (click)="scrollToTop()" [class.visible]="showMoveToTop" aria-label="Scroll to top">
+    <span class="arrow-up">↑</span>
+  </button>
 </nav>
