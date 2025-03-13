@@ -1,28 +1,29 @@
-/* Navbar - Default for Larger Screens */
+/* Navbar - Default Styles */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centered navbar */
   align-items: center;
   text-align: center;
   padding: 15px 5%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7); /* Transparent glassy effect */
   backdrop-filter: blur(10px);
   position: fixed;
-  top: 20px;
+  top: 20px; /* Margin top in larger screens */
   left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
+  transform: translateX(-50%); /* Center the navbar */
+  width: fit-content; /* Fit width in larger screens */
   max-width: 100%;
   z-index: 1000;
-  border-radius: 20px;
+  border-radius: 20px; /* Cylindrical navbar */
   border: solid 1px #FFB22C;
 }
+
 
 /* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 25px; /* Default padding between links */
   padding: 0;
 }
 
@@ -34,7 +35,7 @@
   color: #F7F7F7;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Default padding */
   border-radius: 30px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
@@ -45,123 +46,36 @@
 }
 
 .nav-links a.active {
-  color: #FFB22C;
+  color: #FFB22C; /* Primary color for active section */
   font-weight: bold;
   border-bottom: 2px solid #FFB22C;
 }
 
-/* Mobile View */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-  /* Navbar acts as a header */
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
+    padding: 10px;
+    width: 100%; /* Full width in smaller screens */
+    top: 0; /* Removed margin-top */
     left: 0;
-    border-radius: 0;
+    margin-bottom: 20px;
+    transform: none; /* Remove centering */
+    border-radius: 0px; /* Remove rounded corners for full width */
   }
 
-  /* Toggle Button */
-  .menu-toggle {
-    display: block;
-    background: none;
-    color: #FFB22C;
-    font-size: 28px;
-    border: none;
-    cursor: pointer;
-    margin-left: 15px;
-    transition: transform 0.2s;
-  }
-
-  .menu-toggle:hover {
-    transform: scale(1.1);
-  }
-
-  /* Hide Navbar on Scroll Down */
-  .navbar.hidden {
-    display: none;
-  }
-
-  /* Mobile Menu */
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 20px 0;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Increased gap for better spacing */
   }
 
   .nav-links li {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
+    width: auto;
   }
 
   .nav-links a {
-    display: block;
-    padding: 12px;
-    width: 100%;
-    color: #FFB22C;
-    font-size: 20px;
-    font-weight: bold;
-    transition: 0.3s;
+    padding: 10px 18px; /* Slightly increased padding */
+    font-size: 16px;
   }
-
-  .nav-links a:hover {
-    background: rgba(255, 178, 44, 0.3);
-  }
-}
-
-/* Move to Top Button */
-.move-to-top {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 20px;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-/* Show the button when reaching bottom */
-.move-to-top.visible {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hide initially */
-.move-to-top.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* Adjust SVG Size */
-.move-to-top svg {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Hover Effect */
-.move-to-top:hover svg {
-  transform: scale(1.1);
 }
