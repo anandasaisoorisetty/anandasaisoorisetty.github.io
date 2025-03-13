@@ -1,0 +1,49 @@
+/* app.component.css */
+
+/* Move to Top Button */
+.move-to-top {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px; /* Bottom-right on all screens */
+  right: 20px;
+  background: none; /* No circle */
+  border: none; /* No border */
+  cursor: pointer;
+  z-index: 1000; /* Above footer */
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Hidden initially */
+}
+
+.move-to-top.visible {
+  display: block;
+  opacity: 1; /* Visible when scrolled */
+  animation: slideUpFromBottom 0.5s ease-in-out forwards; /* Animate from bottom */
+}
+
+.move-to-top .arrow-up {
+  width: 30px; /* SVG size */
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .move-to-top {
+    bottom: 15px; /* Closer to edge on mobile */
+    right: 15px;
+  }
+
+  .move-to-top .arrow-up {
+    width: 24px; /* Slightly smaller for mobile */
+    height: 24px;
+  }
+}
+
+@keyframes slideUpFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

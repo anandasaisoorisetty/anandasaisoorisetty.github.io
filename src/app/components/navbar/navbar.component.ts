@@ -11,7 +11,6 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent implements OnInit {
   activeSection: string = '';
   isNavOpen: boolean = false; // Toggle state
-  showMoveToTop: boolean = false; // Move to top visibility
 
   ngOnInit() {
     this.observeSections();
@@ -62,14 +61,5 @@ export class NavbarComponent implements OnInit {
       void toggle.offsetWidth; // Trigger reflow
       toggle.classList.add('animate'); // Re-apply animation
     }
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll() {
-    this.showMoveToTop = window.scrollY > 200; // Show button after scrolling 200px
-  }
-
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
   }
 }
