@@ -10,10 +10,19 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  menuOpen: boolean = false;
-  isHidden: boolean = false;
-  lastScrollTop: number = 0;
-  showScrollButton: boolean = false;
+restartPage() {
+throw new Error('Method not implemented.');
+}
+  menuOpen: boolean = false; // Mobile menu toggle state
+  showScrollButton: boolean = false; // Show move-to-top button when at bottom
+  lastScrollY: number = 0; // Store last scroll position
+  showToggleButton: boolean = false; // Show toggle button only in mobile screens
+  isMobile: boolean = window.innerWidth <= 768; // Detect mobile screen
+isHidden: any;
+
+  constructor() {
+    this.checkScreenSize();
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -23,27 +32,41 @@ export class NavbarComponent {
     this.menuOpen = false;
   }
 
-  restartPage() {
-    window.location.reload();
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.closeMenu(); // Close menu after clicking
+    }
   }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  reloadPage() {
+    window.location.reload(); // Reload the page when clicking "Home"
+  }
+
+  @HostListener('window:resize', [])
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768;
+  }
+
   @HostListener('window:scroll', [])
   onScroll() {
-    const currentScroll = window.scrollY;
+    const scrollY = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
 
-    // Hide navbar on scroll down, show on scroll up
-    if (currentScroll > this.lastScrollTop) {
-      this.isHidden = true;
-    } else {
-      this.isHidden = false;
+    // Show move-to-top button when reaching the bottom
+    this.showScrollButton = scrollY + clientHeight >= scrollHeight - 50;
+
+    // Toggle menu button visibility based on scroll direction
+    if (this.isMobile) {
+      this.showToggleButton = scrollY < this.lastScrollY; // Show when scrolling up
     }
-    this.lastScrollTop = currentScroll;
 
-    // Show "Move to Top" button when scrolled down
-    this.showScrollButton = currentScroll > 500;
+    this.lastScrollY = scrollY;
   }
 }

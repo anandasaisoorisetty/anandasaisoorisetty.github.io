@@ -11,5 +11,9 @@
   </ul>
 </nav>
 
-<!-- Move to Top Button -->
-<button class="move-to-top" (click)="scrollToTop()" [class.visible]="showScrollButton">⬆️</button>
+<!-- Move to Top Button with Custom SVG -->
+<button class="move-to-top" (click)="scrollToTop()" [class.visible]="showScrollButton">
+  <svg width="50" height="50">
+    <path d="M 25 10 L 10 40 L 40 40 Z" stroke="#FFB22C" fill="#FFB22C" />
+  </svg>
+</button>

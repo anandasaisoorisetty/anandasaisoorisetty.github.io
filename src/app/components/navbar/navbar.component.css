@@ -136,23 +136,36 @@
   position: fixed;
   bottom: 40px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #FFB22C;
+  background: rgba(0, 0, 0, 0.8); /* Black glassy background */
   border: none;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 20px;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Show the button when reaching bottom */
 .move-to-top.visible {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Hide initially */
 .move-to-top.hidden {
   opacity: 0;
   transform: translateY(20px);
 }
+
+/* Adjust SVG Size */
+.move-to-top svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.move-to-top:hover svg {
+  transform: scale(1.1);
+}
+
