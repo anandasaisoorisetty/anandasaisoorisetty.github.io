@@ -249,12 +249,20 @@ body, html {
   border: 2px solid #854836;
   align-items: center; /* Center content */
   text-align: center;
-  min-height: 350px;
+  min-height: 300px;
   width: 23%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .service-card:hover {
