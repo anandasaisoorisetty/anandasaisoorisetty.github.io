@@ -1,0 +1,103 @@
+{
+  "configVersion": 1,
+  "timestamp": 1741881403732,
+  "index": "https://anandasaisoorisetty.github.io/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://anandasaisoorisetty.github.io/index.html",
+        "https://anandasaisoorisetty.github.io/main.ab87e4db71cda154.js",
+        "https://anandasaisoorisetty.github.io/manifest.webmanifest",
+        "https://anandasaisoorisetty.github.io/polyfills.b97a24e97c5f07cf.js",
+        "https://anandasaisoorisetty.github.io/runtime.c66cebb6b694f722.js",
+        "https://anandasaisoorisetty.github.io/styles.4476f7949423712c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://anandasaisoorisetty.github.io/assets/behance.svg",
+        "https://anandasaisoorisetty.github.io/assets/design.svg",
+        "https://anandasaisoorisetty.github.io/assets/dev.svg",
+        "https://anandasaisoorisetty.github.io/assets/devops.svg",
+        "https://anandasaisoorisetty.github.io/assets/digital.svg",
+        "https://anandasaisoorisetty.github.io/assets/finance.jpg",
+        "https://anandasaisoorisetty.github.io/assets/github.svg",
+        "https://anandasaisoorisetty.github.io/assets/icon-128.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-144.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-152.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-192.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-384.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-512.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-72.png",
+        "https://anandasaisoorisetty.github.io/assets/icon-96.png",
+        "https://anandasaisoorisetty.github.io/assets/icon.svg",
+        "https://anandasaisoorisetty.github.io/assets/linkedin.svg",
+        "https://anandasaisoorisetty.github.io/assets/mail.svg",
+        "https://anandasaisoorisetty.github.io/assets/profile.png",
+        "https://anandasaisoorisetty.github.io/assets/whatsapp.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://anandasaisoorisetty.github.io/assets/behance.svg": "bc763a601f0304fcc313f6a08e64751f20100ca0",
+    "https://anandasaisoorisetty.github.io/assets/design.svg": "ee36737e9734882848f7349115824eaf3528b9a5",
+    "https://anandasaisoorisetty.github.io/assets/dev.svg": "afe81a253db2406854d63c69fd0ea2a0d48eec31",
+    "https://anandasaisoorisetty.github.io/assets/devops.svg": "279ac8466fe199575bdc7337e6869a958efa5e1b",
+    "https://anandasaisoorisetty.github.io/assets/digital.svg": "f1ba7d6e32cec0ace9eb01639b17158ef61b8d5d",
+    "https://anandasaisoorisetty.github.io/assets/finance.jpg": "b1b1f436ba3f144e504f27e5b9acd4126db5d12f",
+    "https://anandasaisoorisetty.github.io/assets/github.svg": "cf9bf24d3153100184758e30febd687ee4512393",
+    "https://anandasaisoorisetty.github.io/assets/icon-128.png": "ff3319cba4b57d02cc0b2742d1866bd239513313",
+    "https://anandasaisoorisetty.github.io/assets/icon-144.png": "b420042d98a567d20469aacb76bc215c50b99e61",
+    "https://anandasaisoorisetty.github.io/assets/icon-152.png": "b05df3611e40770e25ebbae7d40d80629171ee35",
+    "https://anandasaisoorisetty.github.io/assets/icon-192.png": "3dc819f13eb2833ea77ac2c0c43222ad47d42dc2",
+    "https://anandasaisoorisetty.github.io/assets/icon-384.png": "b1327a3aba98eab7e9518f38aeceb55e288a4425",
+    "https://anandasaisoorisetty.github.io/assets/icon-512.png": "cb806870fa032cfa824db33f9b16b0a5d03c9970",
+    "https://anandasaisoorisetty.github.io/assets/icon-72.png": "8037a239e52843ac81e56e5b2d161066897cea3e",
+    "https://anandasaisoorisetty.github.io/assets/icon-96.png": "0ae4b36f765f0aa434bc96a7eb779e1cb5a689a8",
+    "https://anandasaisoorisetty.github.io/assets/icon.svg": "0cb71d9bef948168132ec35967919618975e8796",
+    "https://anandasaisoorisetty.github.io/assets/linkedin.svg": "d5e3995a6cffe2fdc9ca561baff23ee7f640a77e",
+    "https://anandasaisoorisetty.github.io/assets/mail.svg": "e7201633cd6441ebfc3f2af46b7237ceb2c6bcd5",
+    "https://anandasaisoorisetty.github.io/assets/profile.png": "7fd4bff5a2192ac826e6b740260ac53cf9e8fff0",
+    "https://anandasaisoorisetty.github.io/assets/whatsapp.svg": "f889b477cf3fa265e4c9f10b8185aad0c3fb4d1b",
+    "https://anandasaisoorisetty.github.io/index.html": "ed4bc224dcc00dc7452b3370b82366e05ef32caa",
+    "https://anandasaisoorisetty.github.io/main.ab87e4db71cda154.js": "08ae29c1d3b9b8a2fd120bff2ed5605bba6c30a1",
+    "https://anandasaisoorisetty.github.io/manifest.webmanifest": "3b77fffa874b0008c2d9dbc6274f33ac32078ac4",
+    "https://anandasaisoorisetty.github.io/polyfills.b97a24e97c5f07cf.js": "0e6eed11bb45b55fade3782d7155e0bf69bf88c2",
+    "https://anandasaisoorisetty.github.io/runtime.c66cebb6b694f722.js": "eb51987edc61bf2099b0827fd66feaa34dc7facf",
+    "https://anandasaisoorisetty.github.io/styles.4476f7949423712c.css": "053e5ede52a6db268cf420228536d2312c43d019"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
