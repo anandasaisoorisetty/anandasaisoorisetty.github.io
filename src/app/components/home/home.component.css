@@ -252,13 +252,13 @@ body, html {
 
 /* Individual Service Card */
 .service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 12px;
   border: 2px solid #854836;
+  align-items: center; /* Center content */
   text-align: center;
-  transition: border-color 0.3s ease-in-out;
-  min-height: 200px;
+  min-height: 250px;
   width: 23%;
   display: flex;
   flex-direction: column;
@@ -267,6 +267,7 @@ body, html {
 }
 
 .service-card:hover {
+  transform: scale(1.05);
   border: 2px solid #FFB22C;
 }
 
@@ -284,18 +285,23 @@ body, html {
 }
 
 .service-card img {
-  width: 60px; /* Adjust size as needed */
-  height: 60px;
-  border-radius: 12px; /* Rounded edges */
-  border: 1px solid #F7F7F7; /* 1px stroke color */
-  padding: 5px; /* Space inside the border */
+  width: 80px; /* Increased size */
+  height: 80px;
+  margin-bottom: 15px; /* Space below image */
+  border-radius: 24px; 
+  border: 2px solid #F7F7F7; /* Stroke effect */
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Optional light background */
 }
 
 /* Optional: For SVGs that have `fill` properties */
 .service-card img svg {
   stroke: #854836; /* Stroke color */
-  stroke-width: 1px;
+  stroke-width: 2px;
   border-radius: 12px; /* Rounded edges */
+  width: 80px;
+  height: 80px;
+  fill: none;
 }
 
 
