@@ -1,17 +1,11 @@
 <!-- Navbar -->
+
 <nav class="navbar">
-  <!-- Toggle Button for Mobile Screens -->
-  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
-
-  <!-- Nav Links -->
-  <ul class="nav-links" [class.active]="menuOpen">
-    <li><a href="/" (click)="restartPage()">Home</a></li>
-    <li><a href="#about" (click)="closeMenu()">About</a></li>
-    <li><a href="#services" (click)="closeMenu()">Services</a></li>
-    <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
-    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+  <ul class="nav-links">
+    <li><a href="#home" [class.active]="isActive('home')">Home</a></li>
+    <li><a href="#about" [class.active]="isActive('about')">About</a></li>
+    <li><a href="#services" [class.active]="isActive('services')">Services</a></li>
+    <li><a href="#experience" [class.active]="isActive('experience')">Experience</a></li>
+    <li><a href="#contact" [class.active]="isActive('contact')">Contact</a></li>
   </ul>
-
-  <!-- Overlay when menu is open -->
-  <div class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
 </nav>
