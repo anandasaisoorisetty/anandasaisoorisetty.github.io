@@ -1,21 +1,21 @@
-
 <!-- Navbar -->
 <nav class="navbar" [class.hidden]="isHidden">
-  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  <!-- Toggle Button for Mobile -->
+  <button *ngIf="isMobile" class="menu-toggle" (click)="toggleMenu()">☰</button>
 
-  <ul class="nav-links" [class.active]="menuOpen">
+  <!-- Navigation Links -->
+  <ul class="nav-links" [class.active]="menuOpen || !isMobile">
     <li><a href="/" (click)="restartPage()">Home</a></li>
-    <li><a href="#about" (click)="closeMenu()">About</a></li>
-    <li><a href="#services" (click)="closeMenu()">Services</a></li>
-    <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
-    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    <li><a href="#about" (click)="scrollToSection('about')">About</a></li>
+    <li><a href="#services" (click)="scrollToSection('services')">Services</a></li>
+    <li><a href="#experience" (click)="scrollToSection('experience')">Experience</a></li>
+    <li><a href="#contact" (click)="scrollToSection('contact')">Contact</a></li>
   </ul>
 </nav>
 
-<!-- Move to Top Button with Custom SVG -->
+<!-- Move to Top Button -->
 <button class="move-to-top" (click)="scrollToTop()" [class.visible]="showScrollButton">
   <svg width="50" height="50">
     <path d="M 25 10 L 10 40 L 40 40 Z" stroke="#FFB22C" fill="#FFB22C" />
   </svg>
 </button>
-
