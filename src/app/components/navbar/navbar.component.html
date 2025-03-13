@@ -1,12 +1,15 @@
 <!-- Navbar -->
-<nav class="navbar">
+<nav class="navbar" [class.hidden]="isHidden">
   <button class="menu-toggle" (click)="toggleMenu()">☰</button>
 
   <ul class="nav-links" [class.active]="menuOpen">
-    <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+    <li><a href="/" (click)="restartPage()">Home</a></li>
     <li><a href="#about" (click)="closeMenu()">About</a></li>
     <li><a href="#services" (click)="closeMenu()">Services</a></li>
     <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
     <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
   </ul>
 </nav>
+
+<!-- Move to Top Button -->
+<button class="move-to-top" (click)="scrollToTop()" [class.visible]="showScrollButton">⬆️</button>
