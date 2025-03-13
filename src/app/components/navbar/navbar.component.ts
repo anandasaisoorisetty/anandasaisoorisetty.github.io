@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   activeSection: string = '';
+  isNavOpen: boolean = false; // Toggle state
 
   ngOnInit() {
     this.observeSections();
@@ -36,5 +37,13 @@ export class NavbarComponent implements OnInit {
 
   isActive(section: string): boolean {
     return this.activeSection === section;
+  }
+
+  toggleNav() {
+    this.isNavOpen = !this.isNavOpen; // Toggle the nav menu
+  }
+
+  closeNav() {
+    this.isNavOpen = false; // Close the nav menu
   }
 }

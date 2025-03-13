@@ -18,13 +18,14 @@
   border: solid 1px #FFB22C;
 }
 
-
 /* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px; /* Default padding between links */
   padding: 0;
+  margin: 0; /* Remove default margin */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for toggle */
 }
 
 .nav-links li {
@@ -51,6 +52,45 @@
   border-bottom: 2px solid #FFB22C;
 }
 
+/* Toggle Button (Hidden by Default) */
+.nav-toggle {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  left: 15px; /* Left side of navbar */
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #FFB22C; /* Primary color */
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background: #FFB22C;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
@@ -58,24 +98,58 @@
     width: 100%; /* Full width in smaller screens */
     top: 0; /* Removed margin-top */
     left: 0;
-    margin-bottom: 20px;
     transform: none; /* Remove centering */
-    border-radius: 0px; /* Remove rounded corners for full width */
+    border-radius: 0; /* Remove rounded corners for full width */
+    justify-content: flex-start; /* Align toggle to left */
+    background: rgba(0, 0, 0, 0.7); /* Glassy effect retained */
+    backdrop-filter: blur(10px);
   }
 
+  /* Toggle Button Visible on Small Screens */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Nav Links Hidden by Default */
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Increased gap for better spacing */
+    display: none; /* Hidden initially */
+    flex-direction: column; /* Vertical layout */
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Below navbar */
+    left: 0;
+    background: rgba(0, 0, 0, 0.9); /* Slightly darker glassy effect */
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    gap: 15px;
+  }
+
+  /* Show Nav Links When Toggled */
+  .nav-links.show {
+    display: flex;
   }
 
   .nav-links li {
-    display: inline-block;
-    width: auto;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links a {
-    padding: 10px 18px; /* Slightly increased padding */
+    display: block;
+    padding: 12px 20px; /* Adjusted padding for vertical layout */
     font-size: 16px;
+  }
+
+  /* Hamburger Animation When Open */
+  .nav-toggle.active .hamburger {
+    background: transparent; /* Middle bar disappears */
+  }
+
+  .nav-toggle.active .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }

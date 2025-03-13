@@ -1,11 +1,16 @@
 <!-- Navbar -->
-
 <nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="#home" [class.active]="isActive('home')">Home</a></li>
-    <li><a href="#about" [class.active]="isActive('about')">About</a></li>
-    <li><a href="#services" [class.active]="isActive('services')">Services</a></li>
-    <li><a href="#experience" [class.active]="isActive('experience')">Experience</a></li>
-    <li><a href="#contact" [class.active]="isActive('contact')">Contact</a></li>
+  <!-- Toggle Button for Smaller Screens -->
+  <button class="nav-toggle" (click)="toggleNav()" aria-label="Toggle navigation">
+    <span class="hamburger"></span>
+  </button>
+
+  <!-- Nav Links -->
+  <ul class="nav-links" [class.show]="isNavOpen">
+    <li><a href="#home" [class.active]="isActive('home')" (click)="closeNav()">Home</a></li>
+    <li><a href="#about" [class.active]="isActive('about')" (click)="closeNav()">About</a></li>
+    <li><a href="#services" [class.active]="isActive('services')" (click)="closeNav()">Services</a></li>
+    <li><a href="#experience" [class.active]="isActive('experience')" (click)="closeNav()">Experience</a></li>
+    <li><a href="#contact" [class.active]="isActive('contact')" (click)="closeNav()">Contact</a></li>
   </ul>
 </nav>
