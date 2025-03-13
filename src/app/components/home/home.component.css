@@ -525,6 +525,14 @@ body, html {
   gap: 10px;
   margin-top: 20px;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.social-links.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .social-btn {
