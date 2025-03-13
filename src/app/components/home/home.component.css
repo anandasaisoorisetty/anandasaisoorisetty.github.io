@@ -212,51 +212,10 @@ body, html {
   flex-wrap: wrap;
 }
 
-/* Skill Card Styling */
-.skill-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid #ddd;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  min-height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.skill-card:hover {
-  transform: scale(1.05);
-  border-color: #007bff;
-}
-
-.skill-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.skill-card p {
-  font-size: 14px;
-  color: #666;
-  margin-top: auto;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .about {
     padding: 90px 5% 50px 5%;
-  }
-
-  .skills {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skill-card {
-    width: 90%;
-    min-height: auto;
   }
 }
 
@@ -323,6 +282,22 @@ body, html {
   color: #854836;
   font-weight: 400;
 }
+
+.service-card img {
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
+  border-radius: 12px; /* Rounded edges */
+  border: 1px solid #F7F7F7; /* 1px stroke color */
+  padding: 5px; /* Space inside the border */
+}
+
+/* Optional: For SVGs that have `fill` properties */
+.service-card img svg {
+  stroke: #854836; /* Stroke color */
+  stroke-width: 1px;
+  border-radius: 12px; /* Rounded edges */
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
