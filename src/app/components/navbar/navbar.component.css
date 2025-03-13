@@ -95,13 +95,10 @@
 .move-to-top {
   display: none; /* Hidden by default */
   position: fixed;
-  bottom: 20px;
+  bottom: 20px; /* Always bottom-right */
   right: 20px;
-  background: rgba(255, 255, 255, 0.1); /* Slight glassy effect */
-  border: 1px solid #FFB22C;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  background: none; /* Remove circle */
+  border: none; /* Remove border */
   cursor: pointer;
   z-index: 1000;
   transition: opacity 0.3s ease;
@@ -111,12 +108,14 @@
 .move-to-top.visible {
   display: block;
   opacity: 1; /* Visible when scrolled */
+  animation: slideUpFromBottom 0.5s ease-in-out forwards; /* Animate from bottom */
 }
 
 .move-to-top .arrow-up {
   color: #FFB22C; /* Primary color */
-  font-size: 24px;
-  line-height: 40px; /* Center vertically */
+  font-size: 30px; /* Larger size */
+  font-weight: bold; /* Increase stroke/thickness */
+  line-height: 1; /* Remove extra spacing */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -188,15 +187,12 @@
 
   /* Adjust Move to Top Button for Smaller Screens */
   .move-to-top {
-    bottom: 15px;
+    bottom: 15px; /* Slightly closer to edge */
     right: 15px;
-    width: 35px;
-    height: 35px;
   }
 
   .move-to-top .arrow-up {
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 24px; /* Slightly smaller for mobile */
   }
 }
 
@@ -212,6 +208,18 @@
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for Move to Top Button */
+@keyframes slideUpFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
