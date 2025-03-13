@@ -65,16 +65,15 @@
 /* Hamburger Icon */
 .hamburger {
   display: block;
-  width: 35px; /* Increased width */
+  width: 35px; /* First line unchanged */
   height: 3px;
   background: #FFB22C; /* Primary color */
   position: relative;
 }
 
 .hamburger::before,
- autologous::after {
+.hamburger::after {
   content: '';
-  width: 35px; /* Match increased width */
   height: 3px;
   background: #FFB22C;
   position: absolute;
@@ -83,10 +82,12 @@
 }
 
 .hamburger::before {
+  width: 35px; /* Top line matches first line */
   top: -8px;
 }
 
 .hamburger::after {
+  width: 17.5px; /* Bottom line 50% of first line */
   bottom: -8px;
 }
 
@@ -109,7 +110,7 @@
   .nav-toggle {
     display: block;
     padding: 15px 10px; /* Padding top/bottom 15px, left/right 10px */
-    margin-top: 10px; /* Added margin-top for spacing from top */
+    margin-top: 15px; /* Gap above toggle bar */
   }
 
   /* Nav Links Hidden by Default */
@@ -118,7 +119,7 @@
     flex-direction: column; /* Vertical layout */
     width: 100%;
     position: absolute;
-    top: 70px; /* Adjusted to account for toggle margin */
+    top: 75px; /* Adjusted for toggle margin + padding */
     left: 0;
     background: rgba(0, 0, 0, 0.9); /* Slightly darker background for menu */
     padding: 20px 0;
@@ -147,10 +148,12 @@
   }
 
   .nav-toggle.active .hamburger::before {
+    width: 35px; /* Keep full width for animation */
     transform: rotate(45deg) translate(5px, 5px);
   }
 
   .nav-toggle.active .hamburger::after {
+    width: 35px; /* Full width for animation to form "X" */
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
