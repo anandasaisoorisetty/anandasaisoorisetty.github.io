@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit() {
-    const serviceCards = document.querySelectorAll('.service-card');
+    const elements = document.querySelectorAll('.service-card, .experience-card');
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -23,6 +23,6 @@ export class HomeComponent implements AfterViewInit {
       });
     }, { threshold: 0.2 });
 
-    serviceCards.forEach(card => observer.observe(card));
+    elements.forEach(el => observer.observe(el));
   }
 }
