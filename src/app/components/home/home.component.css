@@ -204,14 +204,6 @@ body, html {
 }
 
 
-/* Skills Section */
-.skills {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .about {
@@ -267,7 +259,6 @@ body, html {
 }
 
 .service-card:hover {
-  transform: scale(1.05);
   border: 2px solid #FFB22C;
 }
 
@@ -291,7 +282,7 @@ body, html {
   border-radius: 24px;
   border: 2px solid #F7F7F7; /* Stroke effect */
   padding: 10px;
-  background: #854836; /* Optional light background */
+  background: #000000; /* Optional light background */
 }
 
 /* Optional: For SVGs that have `fill` properties */
@@ -299,8 +290,8 @@ body, html {
   stroke: #854836; /* Stroke color */
   stroke-width: 2px;
   border-radius: 12px; /* Rounded edges */
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   fill: none;
 }
 
