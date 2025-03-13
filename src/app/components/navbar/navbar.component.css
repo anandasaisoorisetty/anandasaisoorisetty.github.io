@@ -72,7 +72,7 @@
 }
 
 .hamburger::before,
-.hamburger::after {
+ autologous::after {
   content: '';
   width: 35px; /* Match increased width */
   height: 3px;
@@ -109,6 +109,7 @@
   .nav-toggle {
     display: block;
     padding: 15px 10px; /* Padding top/bottom 15px, left/right 10px */
+    margin-top: 10px; /* Added margin-top for spacing from top */
   }
 
   /* Nav Links Hidden by Default */
@@ -117,7 +118,7 @@
     flex-direction: column; /* Vertical layout */
     width: 100%;
     position: absolute;
-    top: 60px; /* Below navbar */
+    top: 70px; /* Adjusted to account for toggle margin */
     left: 0;
     background: rgba(0, 0, 0, 0.9); /* Slightly darker background for menu */
     padding: 20px 0;
