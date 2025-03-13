@@ -27,6 +27,11 @@
                 "glob": "favicon.ico",
                 "input": "src",
                 "output": "/"
+              },
+              {
+                "glob": "manifest.webmanifest",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.css"],
@@ -95,6 +100,11 @@
                 "glob": "favicon.ico",
                 "input": "src",
                 "output": "/"
+              },
+              {
+                "glob": "manifest.webmanifest",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.css"],
@@ -105,7 +115,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "noBuild": false,
-            "baseHref": "/"
+            "baseHref": "https://anandasaisoorisetty.github.io/" 
           }
         }
       }
