@@ -258,7 +258,7 @@ body, html {
   border: 2px solid #854836;
   align-items: center; /* Center content */
   text-align: center;
-  min-height: 250px;
+  min-height: 350px;
   width: 23%;
   display: flex;
   flex-direction: column;
@@ -288,10 +288,10 @@ body, html {
   width: 80px; /* Increased size */
   height: 80px;
   margin-bottom: 15px; /* Space below image */
-  border-radius: 24px; 
+  border-radius: 24px;
   border: 2px solid #F7F7F7; /* Stroke effect */
   padding: 10px;
-  background: rgba(255, 255, 255, 0.1); /* Optional light background */
+  background: #854836; /* Optional light background */
 }
 
 /* Optional: For SVGs that have `fill` properties */
@@ -299,8 +299,8 @@ body, html {
   stroke: #854836; /* Stroke color */
   stroke-width: 2px;
   border-radius: 12px; /* Rounded edges */
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   fill: none;
 }
 
