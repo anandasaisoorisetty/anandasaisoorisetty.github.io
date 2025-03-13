@@ -15,6 +15,7 @@
   z-index: 1000;
   border-radius: 20px; /* Cylindrical navbar */
   border: solid 1px #FFB22C;
+  animation: slideDownFromTop 0.5s ease-in-out forwards; /* Animation for normal screens */
 }
 
 /* Navbar Links */
@@ -32,7 +33,7 @@
 }
 
 .nav-links a {
-  color: #FFB22C;
+  color: #F7F7F7;
   text-decoration: none;
   font-size: 18px;
   padding: 10px 20px; /* Default padding */
@@ -41,14 +42,14 @@
 }
 
 .nav-links a:hover {
-  color: #854836;
+  color: #FFB22C;
   transform: scale(1.1);
 }
 
 .nav-links a.active {
-  color: #854836; /* Primary color for active section */
+  color: #FFB22C; /* Primary color for active section */
   font-weight: bold;
-  border-bottom: 2px solid #854836;
+  border-bottom: 2px solid #FFB22C;
 }
 
 /* Toggle Button (Hidden by Default) */
@@ -104,6 +105,7 @@
     position: fixed; /* Fixed position in smaller screens */
     justify-content: flex-start; /* Align toggle to left */
     background: transparent; /* Transparent background */
+    animation: none; /* Disable animation on smaller screens */
   }
 
   /* Toggle Button Visible on Small Screens */
@@ -171,6 +173,18 @@
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for Navbar (Slide Down from Top) */
+@keyframes slideDownFromTop {
+  0% {
+    transform: translate(-50%, -100%); /* Start above the screen, adjust for existing X-centering */
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0); /* End at normal position */
     opacity: 1;
   }
 }
