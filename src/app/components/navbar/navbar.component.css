@@ -5,8 +5,7 @@
   align-items: center;
   text-align: center;
   padding: 15px 5%;
-  background: rgba(0, 0, 0, 0.7); /* Transparent glassy effect */
-  backdrop-filter: blur(10px);
+  background: transparent; /* Transparent background */
   position: fixed;
   top: 20px; /* Margin top in larger screens */
   left: 50%;
@@ -58,7 +57,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 15px 10px; /* Padding top/bottom 15px, left/right 10px */
   position: absolute;
   left: 15px; /* Left side of navbar */
 }
@@ -66,7 +65,7 @@
 /* Hamburger Icon */
 .hamburger {
   display: block;
-  width: 25px;
+  width: 35px; /* Increased width */
   height: 3px;
   background: #FFB22C; /* Primary color */
   position: relative;
@@ -75,7 +74,7 @@
 .hamburger::before,
 .hamburger::after {
   content: '';
-  width: 25px;
+  width: 35px; /* Match increased width */
   height: 3px;
   background: #FFB22C;
   position: absolute;
@@ -94,23 +93,22 @@
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px 5%; /* Increased padding for toggle spacing */
+    padding: 15px 5%;
     width: 100%; /* Full width in smaller screens */
     top: 0; /* Removed margin-top */
     left: 0;
     transform: none; /* Remove centering */
     border-radius: 0; /* Remove rounded corners for full width */
     border: none; /* Remove border in smaller screens */
-    position: relative; /* Not fixed in smaller screens */
+    position: fixed; /* Fixed position in smaller screens */
     justify-content: flex-start; /* Align toggle to left */
-    background: rgba(0, 0, 0, 0.7); /* Glassy effect retained */
-    backdrop-filter: blur(10px);
+    background: transparent; /* Transparent background */
   }
 
   /* Toggle Button Visible on Small Screens */
   .nav-toggle {
     display: block;
-    padding: 15px; /* Increased padding for toggle */
+    padding: 15px 10px; /* Padding top/bottom 15px, left/right 10px */
   }
 
   /* Nav Links Hidden by Default */
@@ -121,8 +119,7 @@
     position: absolute;
     top: 60px; /* Below navbar */
     left: 0;
-    background: rgba(0, 0, 0, 0.9); /* Slightly darker glassy effect */
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.9); /* Slightly darker background for menu */
     padding: 20px 0;
     gap: 15px;
   }
