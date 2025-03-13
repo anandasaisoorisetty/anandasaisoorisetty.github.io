@@ -46,4 +46,10 @@ export class NavbarComponent implements OnInit {
   closeNav() {
     this.isNavOpen = false; // Close the nav menu
   }
+
+  reloadPage() {
+    this.closeNav(); // Close the menu if open
+    window.location.reload(); // Reload the page
+    window.scrollTo(0, 0); // Scroll to top (runs after reload)
+  }
 }

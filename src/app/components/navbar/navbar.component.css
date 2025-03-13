@@ -94,12 +94,14 @@
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px;
+    padding: 15px 5%; /* Increased padding for toggle spacing */
     width: 100%; /* Full width in smaller screens */
     top: 0; /* Removed margin-top */
     left: 0;
     transform: none; /* Remove centering */
     border-radius: 0; /* Remove rounded corners for full width */
+    border: none; /* Remove border in smaller screens */
+    position: relative; /* Not fixed in smaller screens */
     justify-content: flex-start; /* Align toggle to left */
     background: rgba(0, 0, 0, 0.7); /* Glassy effect retained */
     backdrop-filter: blur(10px);
@@ -108,6 +110,7 @@
   /* Toggle Button Visible on Small Screens */
   .nav-toggle {
     display: block;
+    padding: 15px; /* Increased padding for toggle */
   }
 
   /* Nav Links Hidden by Default */
