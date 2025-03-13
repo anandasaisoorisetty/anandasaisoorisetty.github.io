@@ -57,7 +57,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 15px 10px; /* Padding top/bottom 15px, left/right 10px */
+  padding: 15px 10px 15px 10px; /* Top, right, bottom, left */
   position: absolute;
   left: 15px; /* Left side of navbar */
 }
@@ -65,7 +65,7 @@
 /* Hamburger Icon */
 .hamburger {
   display: block;
-  width: 35px; /* First line unchanged */
+  width: 35px; /* First line */
   height: 3px;
   background: #FFB22C; /* Primary color */
   position: relative;
@@ -82,12 +82,12 @@
 }
 
 .hamburger::before {
-  width: 35px; /* Top line matches first line */
+  width: 26.25px; /* Second line: 75% of 35px */
   top: -8px;
 }
 
 .hamburger::after {
-  width: 17.5px; /* Bottom line 50% of first line */
+  width: 17.5px; /* Third line: 50% of 35px */
   bottom: -8px;
 }
 
@@ -109,8 +109,10 @@
   /* Toggle Button Visible on Small Screens */
   .nav-toggle {
     display: block;
-    padding: 15px 10px; /* Padding top/bottom 15px, left/right 10px */
-    margin-top: 15px; /* Gap above toggle bar */
+    padding: 20px 10px 15px 10px; /* Increased padding-top for gap */
+    margin-top: 15px; /* Kept for additional spacing */
+    left: 15px;
+    animation: slideInFromLeft 0.5s ease-in-out forwards; /* Animation on load */
   }
 
   /* Nav Links Hidden by Default */
@@ -119,7 +121,7 @@
     flex-direction: column; /* Vertical layout */
     width: 100%;
     position: absolute;
-    top: 75px; /* Adjusted for toggle margin + padding */
+    top: 80px; /* Adjusted for padding-top + margin */
     left: 0;
     background: rgba(0, 0, 0, 0.9); /* Slightly darker background for menu */
     padding: 20px 0;
@@ -148,12 +150,24 @@
   }
 
   .nav-toggle.active .hamburger::before {
-    width: 35px; /* Keep full width for animation */
+    width: 35px; /* Full width for animation */
     transform: rotate(45deg) translate(5px, 5px);
   }
 
   .nav-toggle.active .hamburger::after {
-    width: 35px; /* Full width for animation to form "X" */
+    width: 35px; /* Full width for animation */
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Animation for Toggle Button */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

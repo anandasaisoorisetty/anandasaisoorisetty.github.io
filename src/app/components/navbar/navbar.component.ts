@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.observeSections();
+    this.triggerToggleAnimation(); // Trigger animation on load
   }
 
   observeSections() {
@@ -51,5 +52,14 @@ export class NavbarComponent implements OnInit {
     this.closeNav(); // Close the menu if open
     window.location.reload(); // Reload the page
     window.scrollTo(0, 0); // Scroll to top (runs after reload)
+  }
+
+  triggerToggleAnimation() {
+    const toggle = document.querySelector('.nav-toggle') as HTMLElement; // Typecast to HTMLElement
+    if (toggle && window.innerWidth <= 768) {
+      toggle.classList.remove('animate'); // Reset animation
+      void toggle.offsetWidth; // Trigger reflow (now valid with HTMLElement)
+      toggle.classList.add('animate'); // Re-apply animation
+    }
   }
 }
