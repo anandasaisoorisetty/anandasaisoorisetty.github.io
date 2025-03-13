@@ -111,6 +111,39 @@ body, html {
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
+/* Default hidden state */
+.home-content, .cta-buttons, .home-image {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Text Animation */
+.animate-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons Animation */
+.cta-buttons {
+  transform: translateX(-50px);
+}
+
+.animate-buttons {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Profile Image Animation */
+.home-image {
+  transform: translateY(50px);
+}
+
+.animate-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
   .home {
