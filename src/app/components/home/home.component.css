@@ -207,7 +207,7 @@ body, html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .about {
-    padding: 90px 5% 50px 5%;
+    padding: 90px 10% 50px 10%;
   }
 }
 
@@ -238,8 +238,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
+  flex-wrap: wrap;
 }
 
 /* Individual Service Card */
@@ -255,10 +254,11 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: 0.3s;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .service-card:hover {
+  transform: scale(1.05);
   border: 2px solid #FFB22C;
 }
 
@@ -282,7 +282,7 @@ body, html {
   border-radius: 24px;
   border: 2px solid #F7F7F7; /* Stroke effect */
   padding: 10px;
-  background: #000000; /* Optional light background */
+  background: #000000;
 }
 
 /* Optional: For SVGs that have `fill` properties */
@@ -308,10 +308,6 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .about {
-    padding: 90px 10% 50px 10%;
-  }
-
   .services {
     padding: 90px 5% 50px 5%;
   }
