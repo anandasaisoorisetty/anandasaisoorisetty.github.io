@@ -32,7 +32,7 @@
 }
 
 .nav-links a {
-  color: #F7F7F7;
+  color: #FFB22C;
   text-decoration: none;
   font-size: 18px;
   padding: 10px 20px; /* Default padding */
@@ -41,14 +41,14 @@
 }
 
 .nav-links a:hover {
-  color: #FFB22C;
+  color: #854836;
   transform: scale(1.1);
 }
 
 .nav-links a.active {
-  color: #FFB22C; /* Primary color for active section */
+  color: #854836; /* Primary color for active section */
   font-weight: bold;
-  border-bottom: 2px solid #FFB22C;
+  border-bottom: 2px solid #854836;
 }
 
 /* Toggle Button (Hidden by Default) */
