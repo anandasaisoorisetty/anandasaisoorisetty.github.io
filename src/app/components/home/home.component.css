@@ -188,12 +188,12 @@ body, html {
 }
 
 .about p {
+  color: #F7F7F7;
   font-size: 18px;
   line-height: 1.6;
   font-weight: 400;
   max-width: 800px;
   margin: 0 auto 30px;
-  opacity: 0.8;
 }
 
 
@@ -201,8 +201,15 @@ body, html {
 
 .about-content {
   max-width: 700px;
+  opacity: 0;
+  transform: translateY(100px); /* Move down initially */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+.about-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -444,6 +451,14 @@ body, html {
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(100px); /* Move down initially */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-buttons.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact-buttons a {
