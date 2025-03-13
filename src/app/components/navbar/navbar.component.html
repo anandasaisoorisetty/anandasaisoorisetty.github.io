@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <nav class="navbar">
-  <!-- Toggle Button for Mobile -->
+  <!-- Toggle Button for Mobile Screens -->
   <button class="menu-toggle" (click)="toggleMenu()">☰</button>
 
   <!-- Nav Links -->
@@ -12,6 +12,6 @@
     <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
   </ul>
 
-  <!-- Overlay Background when Menu is Open -->
+  <!-- Overlay when menu is open -->
   <div class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
 </nav>
