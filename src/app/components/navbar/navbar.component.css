@@ -134,9 +134,8 @@
 .move-to-top {
   display: none;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.8); /* Black glassy background */
   border: none;
   padding: 10px;
   border-radius: 50%;
@@ -159,8 +158,8 @@
 
 /* Adjust SVG Size */
 .move-to-top svg {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.2s ease-in-out;
 }
 
