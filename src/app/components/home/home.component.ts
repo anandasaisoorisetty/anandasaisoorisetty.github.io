@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -15,31 +15,36 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('buttons') buttons!: ElementRef;
   @ViewChild('profileImage') profileImage!: ElementRef;
 
+  lastScrollY: number = 0;
+
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.homeContent.nativeElement.classList.add('animate-content');
-    }, 200); // Text appears first
+    this.checkScroll(); // Initial check on page load
 
-    setTimeout(() => {
-      this.buttons.nativeElement.classList.add('animate-buttons');
-    }, 600); // Buttons slide from the left
+    window.addEventListener('scroll', () => this.checkScroll());
+  }
 
-    setTimeout(() => {
-      this.profileImage.nativeElement.classList.add('animate-image');
-    }, 1000); // Profile image appears last
+  checkScroll() {
+    const currentScroll = window.scrollY;
+    const isScrollingDown = currentScroll > this.lastScrollY;
+    this.lastScrollY = currentScroll;
 
-    // Animate other sections when in viewport
+    this.toggleAnimation(this.homeContent.nativeElement, isScrollingDown);
+    this.toggleAnimation(this.buttons.nativeElement, isScrollingDown);
+    this.toggleAnimation(this.profileImage.nativeElement, isScrollingDown);
+
+    // Other sections (Experience, Services, Contact, etc.)
     const elements = document.querySelectorAll('.service-card, .experience-card, .about-content, .contact-buttons, .social-links');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show'); // Add animation class
-          observer.unobserve(entry.target); // Stop observing once visible
-        }
-      });
-    }, { threshold: 0.2 });
+    elements.forEach((el) => {
+      this.toggleAnimation(el as HTMLElement, isScrollingDown);
+    });
+  }
 
-    elements.forEach(el => observer.observe(el));
+  toggleAnimation(element: HTMLElement, isScrollingDown: boolean) {
+    if (isScrollingDown) {
+      element.classList.add('show');
+    } else {
+      element.classList.remove('show');
+    }
   }
 }

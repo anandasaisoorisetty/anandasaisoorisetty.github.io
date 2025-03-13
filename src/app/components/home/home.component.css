@@ -644,3 +644,31 @@ body, html {
     height: 18px;
   }
 }
+
+
+/* Default hidden state */
+.home-content, .cta-buttons, .home-image,
+.service-card, .experience-card, .about-content, .contact-buttons, .social-links {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Show animations when scrolling down */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide animations when scrolling up */
+.home-content:not(.show),
+.cta-buttons:not(.show),
+.home-image:not(.show),
+.service-card:not(.show),
+.experience-card:not(.show),
+.about-content:not(.show),
+.contact-buttons:not(.show),
+.social-links:not(.show) {
+  opacity: 0;
+  transform: translateY(50px);
+}
