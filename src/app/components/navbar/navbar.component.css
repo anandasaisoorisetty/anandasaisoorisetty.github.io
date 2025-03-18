@@ -109,6 +109,9 @@
     justify-content: flex-start; /* Align toggle to left */
     background: transparent; /* Transparent background */
     animation: none; /* Disable animation on smaller screens */
+    -webkit-backdrop-filter: none;  /* Safari 9+ */
+    backdrop-filter: none; /* Chrome and Opera */
+    box-shadow: none;
   }
 
   /* Toggle Button Visible on Small Screens */
